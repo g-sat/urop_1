@@ -1,0 +1,6471 @@
+﻿{
+  "section_0": {
+    "left_margin": 1.5,
+    "right_margin": 1.2680555555555555,
+    "top_margin": 1.0,
+    "bottom_margin": 1.6111111111111112,
+    "page_width": 8.268055555555556,
+    "page_height": 11.693055555555556
+  },
+  "section_1": {
+    "left_margin": 1.5,
+    "right_margin": 1.2680555555555555,
+    "top_margin": 1.0,
+    "bottom_margin": 1.6111111111111112,
+    "page_width": 8.268055555555556,
+    "page_height": 11.693055555555556
+  },
+  "section_2": {
+    "left_margin": 1.5,
+    "right_margin": 1.2680555555555555,
+    "top_margin": 1.0,
+    "bottom_margin": 1.6111111111111112,
+    "page_width": 8.268055555555556,
+    "page_height": 11.693055555555556
+  },
+  "section_3": {
+    "left_margin": 1.5,
+    "right_margin": 1.2680555555555555,
+    "top_margin": 1.0,
+    "bottom_margin": 1.6111111111111112,
+    "page_width": 8.268055555555556,
+    "page_height": 11.693055555555556
+  },
+  "section_4": {
+    "left_margin": 1.5,
+    "right_margin": 1.2680555555555555,
+    "top_margin": 1.0,
+    "bottom_margin": 1.6111111111111112,
+    "page_width": 8.268055555555556,
+    "page_height": 11.693055555555556
+  },
+  "section_5": {
+    "left_margin": 1.5,
+    "right_margin": 1.2680555555555555,
+    "top_margin": 1.0,
+    "bottom_margin": 1.6111111111111112,
+    "page_width": 8.268055555555556,
+    "page_height": 11.693055555555556
+  },
+  "section_6": {
+    "left_margin": 1.5,
+    "right_margin": 1.2680555555555555,
+    "top_margin": 1.0,
+    "bottom_margin": 1.6111111111111112,
+    "page_width": 8.268055555555556,
+    "page_height": 11.693055555555556
+  },
+  "section_7": {
+    "left_margin": 1.5,
+    "right_margin": 1.2680555555555555,
+    "top_margin": 1.0,
+    "bottom_margin": 1.6111111111111112,
+    "page_width": 8.268055555555556,
+    "page_height": 11.693055555555556
+  },
+  "section_8": {
+    "left_margin": 1.5,
+    "right_margin": 1.2680555555555555,
+    "top_margin": 1.0,
+    "bottom_margin": 1.6111111111111112,
+    "page_width": 8.268055555555556,
+    "page_height": 11.693055555555556
+  },
+  "section_9": {
+    "left_margin": 1.5,
+    "right_margin": 1.2680555555555555,
+    "top_margin": 1.0,
+    "bottom_margin": 1.6111111111111112,
+    "page_width": 8.268055555555556,
+    "page_height": 11.693055555555556
+  },
+  "section_10": {
+    "left_margin": 1.5,
+    "right_margin": 1.2680555555555555,
+    "top_margin": 1.0,
+    "bottom_margin": 1.6111111111111112,
+    "page_width": 8.268055555555556,
+    "page_height": 11.693055555555556
+  },
+  "section_11": {
+    "left_margin": 1.5,
+    "right_margin": 1.2680555555555555,
+    "top_margin": 1.0,
+    "bottom_margin": 1.6111111111111112,
+    "page_width": 8.268055555555556,
+    "page_height": 11.693055555555556
+  },
+  "styles": {
+    "Title": {
+      "font_name": null,
+      "font_size": 28.0,
+      "bold": null,
+      "italic": null
+    },
+    "Heading 1": {
+      "font_name": "Palatino Linotype",
+      "font_size": 15.5,
+      "bold": true,
+      "italic": null
+    },
+    "Heading 2": {
+      "font_name": "Palatino Linotype",
+      "font_size": 13.5,
+      "bold": true,
+      "italic": null
+    },
+    "Heading 3": {
+      "font_name": "Palatino Linotype",
+      "font_size": 12.0,
+      "bold": true,
+      "italic": null
+    },
+    "Heading 4": {
+      "font_name": null,
+      "font_size": null,
+      "bold": null,
+      "italic": true
+    },
+    "Heading 5": {
+      "font_name": null,
+      "font_size": null,
+      "bold": null,
+      "italic": null
+    },
+    "Heading 6": {
+      "font_name": null,
+      "font_size": null,
+      "bold": null,
+      "italic": null
+    },
+    "Strong": {
+      "font_name": null,
+      "font_size": null,
+      "bold": true,
+      "italic": null
+    },
+    "List Paragraph": {
+      "font_name": null,
+      "font_size": null,
+      "bold": null,
+      "italic": null
+    },
+    "Hyperlink": {
+      "font_name": null,
+      "font_size": null,
+      "bold": null,
+      "italic": null
+    },
+    "footnote reference": {
+      "font_name": null,
+      "font_size": null,
+      "bold": null,
+      "italic": null
+    },
+    "footnote text": {
+      "font_name": null,
+      "font_size": 10.0,
+      "bold": null,
+      "italic": null
+    },
+    "Footnote Text Char": {
+      "font_name": null,
+      "font_size": 10.0,
+      "bold": null,
+      "italic": null
+    },
+    "endnote reference": {
+      "font_name": null,
+      "font_size": null,
+      "bold": null,
+      "italic": null
+    },
+    "endnote text": {
+      "font_name": null,
+      "font_size": 10.0,
+      "bold": null,
+      "italic": null
+    },
+    "Endnote Text Char": {
+      "font_name": null,
+      "font_size": 10.0,
+      "bold": null,
+      "italic": null
+    },
+    "Normal": {
+      "font_name": "Palatino Linotype",
+      "font_size": 12.0,
+      "bold": null,
+      "italic": null
+    },
+    "Front Matter Body": {
+      "font_name": null,
+      "font_size": null,
+      "bold": null,
+      "italic": null
+    },
+    "Front Matter Title": {
+      "font_name": null,
+      "font_size": 15.5,
+      "bold": true,
+      "italic": null
+    },
+    "Contents Entry": {
+      "font_name": null,
+      "font_size": null,
+      "bold": null,
+      "italic": null
+    },
+    "Caption": {
+      "font_name": null,
+      "font_size": 12.0,
+      "bold": null,
+      "italic": false
+    },
+    "Figure": {
+      "font_name": null,
+      "font_size": 1.0,
+      "bold": null,
+      "italic": null
+    },
+    "Table Text": {
+      "font_name": null,
+      "font_size": null,
+      "bold": null,
+      "italic": null
+    },
+    "List Item": {
+      "font_name": null,
+      "font_size": null,
+      "bold": null,
+      "italic": null
+    },
+    "Reference Entry": {
+      "font_name": null,
+      "font_size": null,
+      "bold": null,
+      "italic": null
+    },
+    "Block Text": {
+      "font_name": null,
+      "font_size": null,
+      "bold": null,
+      "italic": null
+    },
+    "Spacer": {
+      "font_name": null,
+      "font_size": 1.0,
+      "bold": null,
+      "italic": null
+    },
+    "Page Number Footer": {
+      "font_name": null,
+      "font_size": null,
+      "bold": null,
+      "italic": null
+    }
+  },
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 24.3,
+      "runs": []
+    },
+    {
+      "index": 1,
+      "text": "UROP PROJECT TITLE",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "UROP PROJECT TITLE",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "text": "Project Report Submitted to the",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": 18.1,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "Project Report Submitted to the",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "text": "SRM University-AP, Andhra Pradesh",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": 0.1,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "SRM University-AP, Andhra Pradesh",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "text": "for the partial fulfillment of the requirements to award the degree of",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "for the partial fulfillment of the requirements to",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "text": "Bachelor of Technology",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": 17.9,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "Bachelor of Technology",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "text": "in",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "in",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "text": "Computer Science & Engineering",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": 0.1,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "Computer Science & Engineering",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "text": "School of Engineering & Sciences",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "School of Engineering & Sciences",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "text": "submitted by",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": 8.6,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "submitted by",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "text": "Akshaya Kirti Krovvidi (AP22110010599)",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": 7.15,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "Akshaya Kirti Krovvidi (AP22110010599)",
+          "font_name": "Palatino Linotype",
+          "font_size": 13.0,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "text": "Sriya Palla (AP22110010705)",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": 6.9,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "Sriya Palla (AP22110010705)",
+          "font_name": "Palatino Linotype",
+          "font_size": 13.0,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "text": "Nipun Sai Kokonda (AP22110010675)",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": 6.9,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "Nipun Sai Kokonda (AP22110010675)",
+          "font_name": "Palatino Linotype",
+          "font_size": 13.0,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "text": "Under the Guidance of",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": 14.25,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "Under the Guidance of",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "text": "Dr. UROP Guide Name",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": 7.8,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "Dr. UROP Guide Name",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "text": "",
+      "style_name": "Figure",
+      "alignment": "None",
+      "space_before": 18.1,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "text": "Department of Computer Science & Engineering",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": 23.7,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "Department of Computer Science & Engineering",
+          "font_name": "Palatino Linotype",
+          "font_size": 14.0,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "text": "SRM University-AP",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "SRM University-AP",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "text": "Neerukonda, Mangalgiri, Guntur",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "Neerukonda, Mangalgiri, Guntur",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "text": "Amaravati, Andhra Pradesh - 522 240",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": 0.1,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "Amaravati, Andhra Pradesh - 522 240",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "text": "Dec 2026",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": 0.5,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 18.0,
+      "runs": [
+        {
+          "text": "Dec 2026",
+          "font_name": "Palatino Linotype",
+          "font_size": 14.0,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "text": "",
+      "style_name": "Normal",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": []
+    },
+    {
+      "index": 22,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 55.55,
+      "runs": []
+    },
+    {
+      "index": 23,
+      "text": "DECLARATION",
+      "style_name": "Front Matter Title",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": 20.65,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 20.0,
+      "runs": [
+        {
+          "text": "DECLARATION",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "text": "I undersigned hereby declare that the project report UROP Project Title submitted for partial fulfil",
+      "style_name": "Front Matter Body",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 21.65,
+      "runs": [
+        {
+          "text": "I undersigned hereby declare that the project repo",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "UROP Project Title",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": " submitted for partial fulfillment of the requirem",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 1.0,
+      "runs": []
+    },
+    {
+      "index": 26,
+      "text": "",
+      "style_name": "Normal",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": []
+    },
+    {
+      "index": 27,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 28.1,
+      "runs": []
+    },
+    {
+      "index": 28,
+      "text": "DEPARTMENT OF COMPUTER SCIENCE &\nENGINEERING\nSRM University-AP\nNeerukonda, Mangalgiri, Guntur\nAmarav",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 23.9,
+      "runs": [
+        {
+          "text": "DEPARTMENT OF COMPUTER SCIENCE &",
+          "font_name": "Palatino Linotype",
+          "font_size": 14.0,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": 14.0,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "ENGINEERING",
+          "font_name": "Palatino Linotype",
+          "font_size": 14.0,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": 14.0,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "SRM University-AP",
+          "font_name": "Palatino Linotype",
+          "font_size": 14.0,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": 14.0,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Neerukonda, Mangalgiri, Guntur",
+          "font_name": "Palatino Linotype",
+          "font_size": 14.0,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": 14.0,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Amaravati, Andhra Pradesh - 522 240",
+          "font_name": "Palatino Linotype",
+          "font_size": 14.0,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "text": "",
+      "style_name": "Figure",
+      "alignment": "None",
+      "space_before": 14.0,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "text": "CERTIFICATE",
+      "style_name": "Normal",
+      "alignment": "CENTER (1)",
+      "space_before": 29.6,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 23.9,
+      "runs": [
+        {
+          "text": "CERTIFICATE",
+          "font_name": "Palatino Linotype",
+          "font_size": 14.0,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "text": "This is to certify that the report entitled UROP Project Title  submitted by Akshaya Kirti Krovvidi,",
+      "style_name": "Front Matter Body",
+      "alignment": "JUSTIFY (3)",
+      "space_before": 12.15,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 21.65,
+      "runs": [
+        {
+          "text": "This is to certify that the report entitled ",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "UROP Project Title",
+          "font_name": "Palatino Linotype",
+          "font_size": 14.0,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "  submitted by ",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Akshaya Kirti Krovvidi, Sriya Palla, Nipun Sai Kok",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "  to the SRM University-AP in partial fulfillment ",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 1.0,
+      "runs": []
+    },
+    {
+      "index": 33,
+      "text": "",
+      "style_name": "Normal",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": []
+    },
+    {
+      "index": 34,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 55.55,
+      "runs": []
+    },
+    {
+      "index": 35,
+      "text": "ACKNOWLEDGMENT",
+      "style_name": "Heading 1",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": 20.65,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 20.0,
+      "runs": [
+        {
+          "text": "ACKNOWLEDGMENT",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "text": "**** Given below is an example of acknowledgments. This may be edited.",
+      "style_name": "Front Matter Body",
+      "alignment": "LEFT (0)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": 35.8,
+      "line_spacing": 21.65,
+      "runs": [
+        {
+          "text": "**** Given below is an example of acknowledgments.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": true,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "text": "I wish to record my indebtedness and thankfulness to all who helped me prepare this Project Report t",
+      "style_name": "Front Matter Body",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 21.65,
+      "runs": [
+        {
+          "text": "I wish to record my indebtedness and thankfulness ",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "UROP Project Title",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": " and present it satisfactorily.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "text": "I am especially thankful for my guide and supervisor Dr. UROP Guide Name in the Department of Comput",
+      "style_name": "Front Matter Body",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 21.65,
+      "runs": [
+        {
+          "text": "I am especially thankful for my guide and supervis",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "text": "My friends in my class have always been helpful and I am grateful to them for patiently listening to",
+      "style_name": "Front Matter Body",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 21.65,
+      "runs": [
+        {
+          "text": "My friends in my class have always been helpful an",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 1.0,
+      "runs": []
+    },
+    {
+      "index": 41,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 55.55,
+      "runs": []
+    },
+    {
+      "index": 42,
+      "text": "ABSTRACT",
+      "style_name": "Heading 1",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": 20.65,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 20.0,
+      "runs": [
+        {
+          "text": "ABSTRACT",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "text": "An abstract is a brief summary of a research article, thesis, review, conference proceeding, or any ",
+      "style_name": "Front Matter Body",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 21.65,
+      "runs": [
+        {
+          "text": "An abstract is a brief summary of a research artic",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 55.55,
+      "runs": []
+    },
+    {
+      "index": 45,
+      "text": "CONTENTS",
+      "style_name": "Front Matter Title",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": 32.65,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 20.0,
+      "runs": [
+        {
+          "text": "CONTENTS",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "text": "ACKNOWLEDGMENT\ti",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "ACKNOWLEDGMENT",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "i",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "text": "ABSTRACT\tii",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": 11.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "ABSTRACT",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "ii",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "text": "LIST OF TABLES\tiv",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": 11.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "LIST OF TABLES",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "iv",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "text": "LIST OF FIGURES\tv",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": 11.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "LIST OF FIGURES",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "v",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "text": "Chapter 1.  INTRODUCTION TO THE PROJECT\t1",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": 11.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Chapter 1.  INTRODUCTION TO THE PROJECT",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "text": "1.1\tWhat is a Project Report?\t1",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 81.3,
+      "first_line_indent": -23.9,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "1.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "What is a Project Report?",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "text": "1.2\tWhat is a Project Report?\t1",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 81.3,
+      "first_line_indent": -23.9,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "1.2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "What is a Project Report?",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "text": "Chapter 2.  MOTIVATION\t2",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": 11.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Chapter 2.  MOTIVATION",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 54,
+      "text": "2.1\tReasons Why Final Year Engineering Projects Are Im-\nportant\t2",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 81.3,
+      "first_line_indent": -23.9,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "2.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Reasons Why Final Year Engineering Projects Are Im",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "portant",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 55,
+      "text": "2.1.1\tIt helps to identify a real-time problem\nand provide a solution\t3",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 148.2,
+      "first_line_indent": -33.4,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "2.1.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "It helps to identify a real-time problem",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "and provide a solution",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "3",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 56,
+      "text": "2.1.2\tIt helps to choose diversified research topics.\t3",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 148.2,
+      "first_line_indent": -33.4,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "2.1.2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "It helps to choose diversified research topics.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "3",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 57,
+      "text": "2.1.3\tIt helps to choose appropriate project top-\nics and mentor carefully.\t4",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 148.2,
+      "first_line_indent": -33.4,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "2.1.3",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "It helps to choose appropriate project top-",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "ics and mentor carefully.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "4",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "text": "2.1.4\tUnderstand and analyze project documen-\ntation effectively.\t4",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 148.2,
+      "first_line_indent": -33.4,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "2.1.4",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Understand and analyze project documen-",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "tation effectively.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "4",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 59,
+      "text": "2.1.5\tEffective planning\t5",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 148.2,
+      "first_line_indent": -33.4,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "2.1.5",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Effective planning",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "5",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 60,
+      "text": "2.1.6\tProvides a platform for self-expression\t5",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 148.2,
+      "first_line_indent": -33.4,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "2.1.6",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Provides a platform for self-expression",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "5",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 61,
+      "text": "Chapter 3.  LITERATURE SURVEY\t6",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": 11.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Chapter 3.  LITERATURE SURVEY",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "6",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 62,
+      "text": "3.1\tTypes\t6",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 81.3,
+      "first_line_indent": -23.9,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "3.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Types",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "6",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 63,
+      "text": "Chapter 4.  DESIGN AND METHODOLOGY\t8",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Chapter 4.  DESIGN AND METHODOLOGY",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "8",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 64,
+      "text": "4.1\tWhat is the Engineering Design Process?\t8",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 81.3,
+      "first_line_indent": -23.9,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "4.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "What is the Engineering Design Process?",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "8",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 65,
+      "text": "4.2\tWhat is the difference between Research Design and\nResearch Method?\t8",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 81.3,
+      "first_line_indent": -23.9,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "4.2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "What is the difference between Research Design and",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Research Method?",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "8",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 66,
+      "text": "Chapter 5.  IMPLEMENTATION\t9",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": 11.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Chapter 5.  IMPLEMENTATION",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "9",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 67,
+      "text": "Chapter 6.  HARDWARE/ SOFTWARE TOOLS USED\t10",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": 11.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Chapter 6.  HARDWARE/ SOFTWARE TOOLS USED",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "10",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 68,
+      "text": "Chapter 7.  RESULTS & DISCUSSION\t11",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": 11.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Chapter 7.  RESULTS & DISCUSSION",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "11",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 69,
+      "text": "7.1\tWhat is the Purpose of a Results Section?\t11",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 81.3,
+      "first_line_indent": -23.9,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "7.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "What is the Purpose of a Results Section?",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "11",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 70,
+      "text": "7.2\tHow Does a Results Section Differ from a Discussion\nSection?\t11",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 81.3,
+      "first_line_indent": -23.9,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "7.2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "How Does a Results Section Differ from a Discussio",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Section?",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "11",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 71,
+      "text": "Chapter 8.  CONCLUSION\t13",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": 11.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Chapter 8.  CONCLUSION",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "13",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 72,
+      "text": "8.1\tScope of further work\t13",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 81.3,
+      "first_line_indent": -23.9,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "8.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Scope of further work",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "13",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 73,
+      "text": "8.1.1\tWhat is future direction in a project?\t13",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 148.2,
+      "first_line_indent": -33.4,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "8.1.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "What is future direction in a project?",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "13",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 74,
+      "text": "REFERENCES\t14",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": 11.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "REFERENCES",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "14",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 75,
+      "text": "LIST OF PUBLICATIONS\t15",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": 11.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "LIST OF PUBLICATIONS",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "15",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 76,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 55.55,
+      "runs": []
+    },
+    {
+      "index": 77,
+      "text": "LIST OF TABLES",
+      "style_name": "Heading 1",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": 20.65,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 20.0,
+      "runs": [
+        {
+          "text": "LIST OF TABLES",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 78,
+      "text": "5.1\tThe sample table.\t9",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 45.4,
+      "first_line_indent": -27.5,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "5.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "The sample table.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "9",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 79,
+      "text": "8.1\tThe sample table.\t13",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": 10.0,
+      "space_after": null,
+      "left_indent": 45.4,
+      "first_line_indent": -27.5,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "8.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "The sample table.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "13",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 80,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 55.55,
+      "runs": []
+    },
+    {
+      "index": 81,
+      "text": "LIST OF FIGURES",
+      "style_name": "Heading 1",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": 20.65,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 20.0,
+      "runs": [
+        {
+          "text": "LIST OF FIGURES",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 82,
+      "text": "2.1\tMotivation.\t3",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 45.4,
+      "first_line_indent": -27.5,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "2.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Motivation.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "3",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 83,
+      "text": "2.2\tIdeas to reality.\t4",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 45.4,
+      "first_line_indent": -27.5,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "2.2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Ideas to reality.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "4",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 84,
+      "text": "6.1\tPython IDE\t10",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": 10.0,
+      "space_after": null,
+      "left_indent": 45.4,
+      "first_line_indent": -27.5,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "6.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Python IDE",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "10",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 85,
+      "text": "6.2\tRaspberry Pi.\t10",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": 45.4,
+      "first_line_indent": -27.5,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "6.2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Raspberry Pi.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "10",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 86,
+      "text": "7.1\tFinal Product\t12",
+      "style_name": "Contents Entry",
+      "alignment": "None",
+      "space_before": 10.0,
+      "space_after": null,
+      "left_indent": 45.4,
+      "first_line_indent": -27.5,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "7.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Final Product",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "12",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 87,
+      "text": "",
+      "style_name": "Normal",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": []
+    },
+    {
+      "index": 88,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 45.8,
+      "runs": []
+    },
+    {
+      "index": 89,
+      "text": "Chapter 1\nINTRODUCTION TO THE PROJECT",
+      "style_name": "Heading 1",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": 19.1,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 19.9,
+      "runs": [
+        {
+          "text": "Chapter 1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "INTRODUCTION TO THE PROJECT",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 90,
+      "text": "This chapter introduces the report\u2019s contents to the readers. The scope, essential parameters, objec",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "This chapter introduces the report\u2019s contents to t",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 91,
+      "text": "1.1\tWHAT IS A PROJECT REPORT?",
+      "style_name": "Heading 2",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "1.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "WHAT IS A PROJECT REPORT?",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 92,
+      "text": "A project report is a document that describes a project\u2019s objectives, milestones, challenges, and pr",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "A project report is a document that describes a pr",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 93,
+      "text": "A project report is a document that consists of crucial information about a project. It includes inf",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "A project report is a document that consists of cr",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 94,
+      "text": "1.2\tWHAT IS A PROJECT REPORT?",
+      "style_name": "Heading 2",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "1.2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "WHAT IS A PROJECT REPORT?",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 95,
+      "text": "A project report is a document that describes a project\u2019s objectives, milestones, challenges, and pr",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "A project report is a document that describes a pr",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 96,
+      "text": "A project report is a document that consists of crucial information about a project. It includes inf",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "A project report is a document that consists of cr",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 97,
+      "text": "",
+      "style_name": "Normal",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": []
+    },
+    {
+      "index": 98,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 45.8,
+      "runs": []
+    },
+    {
+      "index": 99,
+      "text": "Chapter 2\nMOTIVATION",
+      "style_name": "Heading 1",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": 19.1,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 19.9,
+      "runs": [
+        {
+          "text": "Chapter 2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "MOTIVATION",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 100,
+      "text": "In this chapter, you can write down the reasons behind the topic selection.",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "In this chapter, you can write down the reasons be",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 101,
+      "text": "2.1\tREASONS WHY FINAL YEAR ENGINEERING PROJECTS ARE IMPORTANT",
+      "style_name": "Heading 2",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "2.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "REASONS WHY FINAL YEAR ENGINEERING PROJECTS ARE IM",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 102,
+      "text": "These projects can be inspired by your seniors or copied from other sources. Yet, your faculties giv",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "These projects can be inspired by your seniors or ",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 103,
+      "text": "An innovative and worthwhile final year project helps to provide practical exposure that helps to en",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "An innovative and worthwhile final year project he",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 104,
+      "text": "The projects fulfill the purpose of synthesizing the knowledge acquired during the years and demonst",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "The projects fulfill the purpose of synthesizing t",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 105,
+      "text": "A final year engineering project is a pivotal part of your academic curriculum as an engineering stu",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "A final year engineering project is a pivotal part",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 106,
+      "text": "Explore your area of interest and work on such projects- Usually, we tend to take projects which don",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "Explore your area of interest and work on such pro",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 107,
+      "text": "",
+      "style_name": "Figure",
+      "alignment": "None",
+      "space_before": 14.4,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 108,
+      "text": "Figure 2.1: Motivation.",
+      "style_name": "Caption",
+      "alignment": "None",
+      "space_before": 12.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Figure 2.1: Motivation.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 109,
+      "text": "2.1.1\tIt helps to identify a real-time problem and provide a solution",
+      "style_name": "Heading 3",
+      "alignment": "None",
+      "space_before": 31.65,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "2.1.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "It helps to identify a real-time problem and provi",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 110,
+      "text": "The best way to identify a project idea is to address real-time problems/scenarios and develop relev",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "The best way to identify a project idea is to addr",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 111,
+      "text": "As engineering students, you can enhance and boost your creativity and work on various projects that",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "As engineering students, you can enhance and boost",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 112,
+      "text": "2.1.2\tIt helps to choose diversified research topics.",
+      "style_name": "Heading 3",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "2.1.2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "It helps to choose diversified research topics.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 113,
+      "text": "Suppose you plan to work on a blockchain project or any embedded project; you can read the research ",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "Suppose you plan to work on a blockchain project o",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 114,
+      "text": "These research papers help you know the latest tech trends related to your project domain. You can a",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "These research papers help you know the latest tec",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 115,
+      "text": "",
+      "style_name": "Figure",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 116,
+      "text": "Figure 2.2: Ideas to reality.",
+      "style_name": "Caption",
+      "alignment": "None",
+      "space_before": 12.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Figure 2.2: Ideas to reality.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 117,
+      "text": "2.1.3\tIt helps to choose appropriate project topics and mentor carefully.",
+      "style_name": "Heading 3",
+      "alignment": "None",
+      "space_before": 20.85,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "2.1.3",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "It helps to choose appropriate project topics and ",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 118,
+      "text": "Final year projects enable students to participate in group discussions brainstorming sessions posse",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "Final year projects enable students to participate",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 119,
+      "text": "Computer vision projects [2]",
+      "style_name": "List Item",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Computer vision projects [",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 120,
+      "text": "Analytics projects",
+      "style_name": "List Item",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Analytics projects",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 121,
+      "text": "Machine learning projects",
+      "style_name": "List Item",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Machine learning projects",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 122,
+      "text": "Android app projects",
+      "style_name": "List Item",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Android app projects",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 123,
+      "text": "Python projects",
+      "style_name": "List Item",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Python projects",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 124,
+      "text": "Robotics projects",
+      "style_name": "List Item",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Robotics projects",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 125,
+      "text": "2.1.4\tUnderstand and analyze project documentation effectively.",
+      "style_name": "Heading 3",
+      "alignment": "None",
+      "space_before": 17.75,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "2.1.4",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Understand and analyze project documentation effec",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 126,
+      "text": "Project documentation and presentation are some aspects widely ignored by engineering students. It h",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "Project documentation and presentation are some as",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 127,
+      "text": "It helps students get well-versed with the project as the interviewer will ask several questions reg",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "It helps students get well-versed with the project",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 128,
+      "text": "2.1.5\tEffective planning",
+      "style_name": "Heading 3",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "2.1.5",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Effective planning",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 129,
+      "text": "It is one of the significant reasons why final-year engineering projects are important.  It helps st",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "It is one of the significant reasons why final-yea",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 130,
+      "text": "2.1.6\tProvides a platform for self-expression",
+      "style_name": "Heading 3",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "2.1.6",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Provides a platform for self-expression",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 131,
+      "text": "Project planning helps enhance communication skills team working skills and helps to strengthen your",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "Project planning helps enhance communication skill",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 132,
+      "text": "",
+      "style_name": "Normal",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": []
+    },
+    {
+      "index": 133,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 45.8,
+      "runs": []
+    },
+    {
+      "index": 134,
+      "text": "Chapter 3\nLITERATURE SURVEY",
+      "style_name": "Heading 1",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": 19.1,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 19.9,
+      "runs": [
+        {
+          "text": "Chapter 3",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "LITERATURE SURVEY",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 135,
+      "text": "A literature review is an overview of the previously published works on a topic. The term can refer ",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "A literature review is an overview of the previous",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 136,
+      "text": "Producing a literature review is often a part of graduate and postgraduate student work, including i",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "Producing a literature review is often a part of g",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 137,
+      "text": "A literature review can be a type of review article. In this sense, a literature review is a scholar",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "A literature review can be a type of review articl",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 138,
+      "text": "3.1\tTYPES",
+      "style_name": "Heading 2",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "3.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "TYPES",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 139,
+      "text": "Since the concept of a systematic review was formalized (codified) in the 1970s, a basic division am",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "Since the concept of a systematic review was forma",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 140,
+      "text": "The main types of narrative reviews are evaluative, exploratory, and instrumental.",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "The main types of narrative reviews are evaluative",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 141,
+      "text": "A fourth type of review, the systematic review, also reviews the literature (the scientific literatu",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "A fourth type of review, the systematic review, al",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 142,
+      "text": "",
+      "style_name": "Normal",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": []
+    },
+    {
+      "index": 143,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 45.8,
+      "runs": []
+    },
+    {
+      "index": 144,
+      "text": "Chapter 4\nDESIGN AND METHODOLOGY",
+      "style_name": "Heading 1",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": 19.1,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 19.9,
+      "runs": [
+        {
+          "text": "Chapter 4",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "DESIGN AND METHODOLOGY",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 145,
+      "text": "The engineering design process is a series of steps that engineers follow to come up with a solution",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "The engineering design process is a series of step",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 146,
+      "text": "4.1\tWHAT IS THE ENGINEERING DESIGN PROCESS?",
+      "style_name": "Heading 2",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "4.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "WHAT IS THE ENGINEERING DESIGN PROCESS?",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 147,
+      "text": "Many times the solution to a problem involves designing a product (like a machine or computer code) ",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "Many times the solution to a problem involves desi",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "6",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "].",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 148,
+      "text": "4.2\tWHAT IS THE DIFFERENCE BETWEEN RESEARCH DESIGN AND RESEARCH METHOD?",
+      "style_name": "Heading 2",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "4.2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "WHAT IS THE DIFFERENCE BETWEEN RESEARCH DESIGN AND",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 149,
+      "text": "Research design is a plan to answer your research question. A research method is a strategy used to ",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "Research design is a plan to answer your research ",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 150,
+      "text": "",
+      "style_name": "Normal",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": []
+    },
+    {
+      "index": 151,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 45.8,
+      "runs": []
+    },
+    {
+      "index": 152,
+      "text": "Chapter 5\nIMPLEMENTATION",
+      "style_name": "Heading 1",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": 19.1,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 19.9,
+      "runs": [
+        {
+          "text": "Chapter 5",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "IMPLEMENTATION",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 153,
+      "text": "A project implementation plan helps with everything from development sprints and product launches to",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "A project implementation plan helps with everythin",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 154,
+      "text": "Project implementation plan should include everything from project goals to deliverables and act as ",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": 14.5,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "Project implementation plan should include everyth",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "4",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "].",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 155,
+      "text": "Table 5.1: The sample table.",
+      "style_name": "Caption",
+      "alignment": "None",
+      "space_before": 8.35,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Table 5.1: The sample table.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 156,
+      "text": "",
+      "style_name": "Normal",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": []
+    },
+    {
+      "index": 157,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 45.8,
+      "runs": []
+    },
+    {
+      "index": 158,
+      "text": "Chapter 6\nHARDWARE/ SOFTWARE TOOLS USED",
+      "style_name": "Heading 1",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": 19.1,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 19.9,
+      "runs": [
+        {
+          "text": "Chapter 6",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "HARDWARE/ SOFTWARE TOOLS USED",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 159,
+      "text": "This chapter discusses the details of the hardware used in the implementation of the Project along w",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "This chapter discusses the details of the hardware",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 160,
+      "text": "",
+      "style_name": "Figure",
+      "alignment": "None",
+      "space_before": 14.3,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 161,
+      "text": "Figure 6.1: Python IDE",
+      "style_name": "Caption",
+      "alignment": "None",
+      "space_before": 12.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Figure 6.1: Python IDE",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 162,
+      "text": "",
+      "style_name": "Figure",
+      "alignment": "None",
+      "space_before": 28.3,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 163,
+      "text": "Figure 6.2: Raspberry Pi.",
+      "style_name": "Caption",
+      "alignment": "None",
+      "space_before": 12.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Figure 6.2: Raspberry Pi.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 164,
+      "text": "",
+      "style_name": "Normal",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": []
+    },
+    {
+      "index": 165,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 45.8,
+      "runs": []
+    },
+    {
+      "index": 166,
+      "text": "Chapter 7\nRESULTS & DISCUSSION",
+      "style_name": "Heading 1",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": 19.1,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 19.9,
+      "runs": [
+        {
+          "text": "Chapter 7",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "RESULTS & DISCUSSION",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 167,
+      "text": "The results (or findings) section is one of the most important parts of a research paper, in which a",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "The results (or findings) section is one of the mo",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 168,
+      "text": "7.1\tWHAT IS THE PURPOSE OF A RESULTS SECTION?",
+      "style_name": "Heading 2",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "7.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "WHAT IS THE PURPOSE OF A RESULTS SECTION?",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 169,
+      "text": "The results section summarizes and presents the findings of the study to put them in context with yo",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "The results section summarizes and presents the fi",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 170,
+      "text": "7.2\tHOW DOES A RESULTS SECTION DIFFER FROM A DISCUSSION SECTION?",
+      "style_name": "Heading 2",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "7.2",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "HOW DOES A RESULTS SECTION DIFFER FROM A DISCUSSIO",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 171,
+      "text": "The results section of a research paper tells the reader what you found, while the discussion sectio",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "The results section of a research paper tells the ",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 172,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 228.5,
+      "runs": []
+    },
+    {
+      "index": 173,
+      "text": "",
+      "style_name": "Figure",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 174,
+      "text": "Figure 7.1: Final Product",
+      "style_name": "Caption",
+      "alignment": "None",
+      "space_before": 12.95,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Figure 7.1: Final Product",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 175,
+      "text": "",
+      "style_name": "Normal",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": []
+    },
+    {
+      "index": 176,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 45.8,
+      "runs": []
+    },
+    {
+      "index": 177,
+      "text": "Chapter 8\nCONCLUSION",
+      "style_name": "Heading 1",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": 19.1,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 19.9,
+      "runs": [
+        {
+          "text": "Chapter 8",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\n",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "CONCLUSION",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 178,
+      "text": "This chapter presents the results and conclusions of the project. It also contains a discussion on t",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": 14.5,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "This chapter presents the results and conclusions ",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 179,
+      "text": "Table 8.1: The sample table.",
+      "style_name": "Caption",
+      "alignment": "None",
+      "space_before": 8.35,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "Table 8.1: The sample table.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 180,
+      "text": "8.1\tSCOPE OF FURTHER WORK",
+      "style_name": "Heading 2",
+      "alignment": "None",
+      "space_before": 34.05,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "8.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "SCOPE OF FURTHER WORK",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 181,
+      "text": "8.1.1\tWhat is future direction in a project?",
+      "style_name": "Heading 3",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "8.1.1",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "What is future direction in a project?",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 182,
+      "text": "The third element of your conclusion is a call to action or a future direction for your research pap",
+      "style_name": "Normal",
+      "alignment": "JUSTIFY (3)",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 14.45,
+      "runs": [
+        {
+          "text": "The third element of your conclusion is a call to ",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 183,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 45.8,
+      "runs": []
+    },
+    {
+      "index": 184,
+      "text": "REFERENCES",
+      "style_name": "Heading 1",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": 18.95,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 19.9,
+      "runs": [
+        {
+          "text": "REFERENCES",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 185,
+      "text": "\t[1]\tG. O. Young, Synthetic structure of industrial plastics, in Plastics, 2nd Ed., Vol.3, J.Peters,",
+      "style_name": "Reference Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "[1]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "G. O. Young",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": ", Synthetic structure of industrial plastics, in ",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Plastics",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": true,
+          "underline": null
+        },
+        {
+          "text": ", 2nd Ed., Vol.3, J.Peters, Ed. New York: McGraw H",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 186,
+      "text": "\t[2]\tBradshaw, P., An Introduction to Turbulence and its Measurement, Pergamon Press, 1971.",
+      "style_name": "Reference Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "[2]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Bradshaw, P.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": ", An Introduction to Turbulence and its Measuremen",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 187,
+      "text": "\t[3]\tJ. U. Duncombe, Inrared navigation \u2013 Part I : An Assessment of feasibility, IEEE Trans. Electro",
+      "style_name": "Reference Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "[3]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "J. U. Duncombe",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": ", Inrared navigation \u2013 Part I : An Assessment of f",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "IEEE Trans. Electron Devices",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": true,
+          "underline": null
+        },
+        {
+          "text": ", Vol. ED-11, No.1, 34-39, Jan 1959",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 188,
+      "text": "\t[4]\tOxygen absorption in the earths",
+      "style_name": "Reference Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "[4]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Oxygen absorption in the earths",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 189,
+      "text": "\t[5]\tBradshaw, P., An Introduction to Turbulence and its Measurement, Pergamon Press, 1111.",
+      "style_name": "Reference Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "[5]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Bradshaw, P.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": ", An Introduction to Turbulence and its Measuremen",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 190,
+      "text": "\t[6]\tE. E. Reber, R. L. Michell and C. J. Carter, Oxygen absorption in the earths atmosphere, Aerspa",
+      "style_name": "Reference Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "[6]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "E. E. Reber, R. L. Michell and C. J. Carter",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": ", Oxygen absorption in the earths atmosphere, Aers",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 191,
+      "text": "\t[7]\tAndrews, G.E and D.Bradley (1972) The Burning Velocity of Methane-Air Mixtures, Combustion & Fl",
+      "style_name": "Reference Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "[7]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Andrews, G.E and D.Bradley",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": " (1972) The Burning Velocity of Methane-Air Mixtur",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Combustion & Flame",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": true,
+          "underline": null
+        },
+        {
+          "text": ", 19, 275-288.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 192,
+      "text": "\t[8]\tTransmission Systems for Communications, 3rd Ed., Western Electric Co., Winston \u2013 Salem, NC, 19",
+      "style_name": "Reference Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "[8]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Transmission Systems for Communications, 3rd Ed., ",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 193,
+      "text": "\t[9]\tMotorola Semiconductor Data Manual, Motorola Semiconductor Products Inc., Phoenix, AZ, 1989.",
+      "style_name": "Reference Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "[9]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Motorola Semiconductor Data Manual, Motorola Semic",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 194,
+      "text": "\t[10]\tLefebvre, A. H., (1965) Progress and Problems in Gas Turbine Combustion, 10th Symposium (Inter",
+      "style_name": "Reference Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "[10]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Lefebvre, A. H.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": ", (1965) Progress and Problems in Gas Turbine Comb",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "10th Symposium (International) on Combustion",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": true,
+          "underline": null
+        },
+        {
+          "text": ", The Combustion Institute, Pittsburg, 1129- 1137.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 195,
+      "text": "\t[11]\tJones (1991, May 10), Networks, (2nd Ed.) [Online]. Available: http://www.atm.com (online jour",
+      "style_name": "Reference Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "[11]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Jones",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": " (1991, May 10), Networks, (2nd Ed.) [Online]. Ava",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "http://www.atm.com",
+          "font_name": "Courier New",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": " (online journals).",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 196,
+      "text": "\t[12]\tR. J. Vidmar, (1992, Aug.). On the use of atmospheric plasmas as electromagnetic reflectors. I",
+      "style_name": "Reference Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "[12]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "R. J. Vidmar",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": ", (1992, Aug.). On the use of atmospheric plasmas ",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "http://www.halcyon.com/pub/journals/21ps03-vidmar",
+          "font_name": "Courier New",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 197,
+      "text": "",
+      "style_name": "Spacer",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 45.8,
+      "runs": []
+    },
+    {
+      "index": 198,
+      "text": "LIST OF PUBLICATIONS",
+      "style_name": "Heading 1",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": 18.95,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": 19.9,
+      "runs": [
+        {
+          "text": "LIST OF PUBLICATIONS",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 199,
+      "text": "\t[1]\tAndrews, G.E and D.Bradley (1972) The Burning Velocity of Methane-Air Mixtures, Combustion & Fl",
+      "style_name": "Reference Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "[1]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Andrews, G.E and D.Bradley",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": " (1972) The Burning Velocity of Methane-Air Mixtur",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Combustion & Flame",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": true,
+          "underline": null
+        },
+        {
+          "text": ", 19, 275-288.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 200,
+      "text": "\t[2]\tJ. U. Duncombe, Inrared navigation \u2013 Part I : An Assessment of feasibility, IEEE Trans. Electro",
+      "style_name": "Reference Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "[2]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "J. U. Duncombe",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": ", Inrared navigation \u2013 Part I : An Assessment of f",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "IEEE Trans. Electron Devices",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": true,
+          "underline": null
+        },
+        {
+          "text": ", Vol. ED-11, No.1, 34-39, Jan 1959",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    },
+    {
+      "index": 201,
+      "text": "\t[3]\tLefebvre, A. H., (1965) Progress and Problems in Gas Turbine Combustion, 10th Symposium (Intern",
+      "style_name": "Reference Entry",
+      "alignment": "None",
+      "space_before": null,
+      "space_after": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null,
+      "runs": [
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "[3]",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "\t",
+          "font_name": null,
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "Lefebvre, A. H.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": true,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": ", (1965) Progress and Problems in Gas Turbine Comb",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        },
+        {
+          "text": "10th Symposium (International) on Combustion",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": true,
+          "underline": null
+        },
+        {
+          "text": ", The Combustion Institute, Pittsburg, 1129- 1137.",
+          "font_name": "Palatino Linotype",
+          "font_size": null,
+          "bold": null,
+          "italic": null,
+          "underline": null
+        }
+      ]
+    }
+  ]
+}

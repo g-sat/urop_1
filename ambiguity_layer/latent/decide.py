@@ -39,6 +39,7 @@ def classify(
     readings: list[str],
     immediate_answers: list[str],
     followup_answers: list[str],
+    equivalent=None,
 ) -> dict[str, str]:
     """Classify from the answers under each reading.
 
@@ -52,13 +53,20 @@ def classify(
     if len(immediate_answers) != len(readings) or len(followup_answers) != len(readings):
         raise ValueError("readings, immediate answers, and follow-up answers must align")
 
-    if not _all_same(immediate_answers):
+    same = equivalent or same_answer
+
+    def uniform(values: list[str]) -> bool:
+        if len(values) < 2:
+            return True
+        return all(same(values[0], other) for other in values[1:])
+
+    if not uniform(immediate_answers):
         return {
             "label": DECISION,
             "action": "ask",
             "reason": "immediate answers differ",
         }
-    if not _all_same(followup_answers):
+    if not uniform(followup_answers):
         return {
             "label": LATENT,
             "action": "answer_with_assumption",
@@ -69,3 +77,23 @@ def classify(
         "action": "answer",
         "reason": "readings change neither the answer nor the follow-up",
     }
+
+
+def confidence(immediate_answers: list[str], followup_answers: list[str], label: str) -> float:
+    """Margin of the label. 1 is a clean split or a clean match. Not a probability."""
+    from ambiguity_layer.eval.embeddings import cosine, embed
+
+    def mean_sim(values: list[str]) -> float:
+        if len(values) < 2:
+            return 1.0
+        vectors = embed(values)
+        sims = [cosine(vectors[0], vectors[i]) for i in range(1, len(vectors))]
+        return float(sum(sims) / len(sims))
+
+    immediate = mean_sim(immediate_answers)
+    follow = mean_sim(followup_answers)
+    if label == DECISION:
+        return round(max(0.0, min(1.0, 1.0 - immediate)), 3)
+    if label == LATENT:
+        return round(max(0.0, min(1.0, immediate * (1.0 - follow))), 3)
+    return round(max(0.0, min(1.0, min(immediate, follow))), 3)
