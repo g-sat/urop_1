@@ -115,26 +115,57 @@ def _noun_chunks_before(doc: Doc, token: Token) -> list[str]:
     return chunks
 
 
+_SPEAKER = {
+    "i", "me", "my", "mine", "we", "us", "our", "ours", "you", "your", "yours",
+}
+_THIRD_PERSON = {"it", "its", "they", "them", "their", "he", "she", "him", "her"}
+
+
+def _content_chunks_before(doc: Doc, token: Token) -> list[str]:
+    chunks: list[str] = []
+    seen: set[str] = set()
+    for chunk in doc.noun_chunks:
+        if chunk.end > token.i or chunk.root.pos_ in {"PRON", "DET", "ADP"}:
+            continue
+        text = " ".join(chunk.text.split())
+        key = text.lower()
+        if len(key) < 3 or key in seen or key in _SPEAKER:
+            continue
+        seen.add(key)
+        chunks.append(text)
+    return chunks
+
+
 def _coref_ambiguity(doc: Doc) -> list[dict[str, Any]]:
+    """Only third-person or demonstrative forms with two content antecedents.
+
+    Called from analyze() in this file. Speaker words were being labeled
+    semantic_overlap, which collapsed the type counts the user flagged.
+    """
     cues: list[dict[str, Any]] = []
     for t in doc:
         low = t.text.lower()
-        if low not in AMBIGUOUS_DEMONSTRATIVES and t.pos_ != "PRON":
+        if low in _SPEAKER:
             continue
-        if t.pos_ not in {"PRON", "DET"} and low not in AMBIGUOUS_DEMONSTRATIVES:
+        if low not in _THIRD_PERSON and low not in AMBIGUOUS_DEMONSTRATIVES:
             continue
-        antecedents = _noun_chunks_before(doc, t)
-        # Multiple plausible antecedents → coreference ambiguity
-        if len(antecedents) >= 2:
-            cues.append(
-                {
-                    "pronoun": t.text,
-                    "start": t.idx,
-                    "end": t.idx + len(t.text),
-                    "antecedents": antecedents[-4:],
-                    "detail": f"'{t.text}' has {len(antecedents)} prior noun-phrase antecedents",
-                }
-            )
+        # "that number" is a determiner plus a noun, not an unclear referent.
+        if t.pos_ == "DET" and any(c.pos_ in {"NOUN", "PROPN"} for c in t.children):
+            continue
+        if t.dep_ == "det":
+            continue
+        antecedents = _content_chunks_before(doc, t)
+        if len(antecedents) < 2:
+            continue
+        cues.append(
+            {
+                "pronoun": t.text,
+                "start": t.idx,
+                "end": t.idx + len(t.text),
+                "antecedents": antecedents[-4:],
+                "detail": f"'{t.text}' has {len(antecedents)} competing content antecedents",
+            }
+        )
     return cues
 
 
@@ -240,7 +271,7 @@ def _propose_spans(doc: Doc, analysis: NLPAnalysis) -> list[SpanSignal]:
                 start=cue["start"],
                 end=cue["end"],
                 kind="coref",
-                score=min(0.95, 0.55 + 0.1 * len(cue["antecedents"])),
+                score=0.62,
                 detail=cue["detail"] + f"; candidates={cue['antecedents']}",
                 suggested_type="semantic_overlap",
             )

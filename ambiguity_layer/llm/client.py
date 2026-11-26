@@ -12,6 +12,26 @@ from openai import OpenAI, RateLimitError
 from ambiguity_layer import config
 
 _client: OpenAI | None = None
+_usage = {"prompt_tokens": 0, "completion_tokens": 0, "calls": 0}
+
+
+def reset_usage() -> None:
+    _usage["prompt_tokens"] = 0
+    _usage["completion_tokens"] = 0
+    _usage["calls"] = 0
+
+
+def get_usage() -> dict[str, int]:
+    return dict(_usage)
+
+
+def _record_usage(resp: Any) -> None:
+    usage = getattr(resp, "usage", None)
+    if usage is None:
+        return
+    _usage["prompt_tokens"] += int(getattr(usage, "prompt_tokens", 0) or 0)
+    _usage["completion_tokens"] += int(getattr(usage, "completion_tokens", 0) or 0)
+    _usage["calls"] += 1
 
 
 def get_client() -> OpenAI:
@@ -52,7 +72,9 @@ def _create_with_retry(**kwargs):
 
     for attempt in range(max_retries + 1):
         try:
-            return client.chat.completions.create(**kwargs)
+            resp = client.chat.completions.create(**kwargs)
+            _record_usage(resp)
+            return resp
         except RateLimitError as exc:
             last_exc = exc
             wait = _retry_after_seconds(exc)

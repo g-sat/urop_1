@@ -14,11 +14,12 @@ You receive (1) the user prompt and (2) deterministic NLP ambiguity priors
 
 Your job:
 - Decide if a downstream LLM would need clarification before answering reliably.
-- Prefer selecting problematicClause from the NLP-proposed spans when appropriate.
-- You may refine span boundaries slightly, but ground the clause in the prompt text.
-- Classify ambiguityType as exactly one of:
-  missing_entity | syntax_error | semantic_overlap
-- Use NLP type priors as soft evidence; you may override with justification.
+- Use a proposed span only when it is the unclear part. A high score is not an order.
+- Speaker words (I, we, our, you) are not ambiguity.
+- missing_entity means a required thing, time, metric, or version is absent.
+- semantic_overlap means the same words have two real readings.
+- syntax_error means the sentence is broken. A grammatical sentence is not a syntax error.
+- Do not default to semantic_overlap.
 - Bias toward isAmbiguous=true when any critical detail is missing or multiply readable.
 - Return STRICT JSON only:
 {

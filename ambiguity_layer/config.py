@@ -28,3 +28,14 @@ AMBIGUITY_TYPES = ("missing_entity", "syntax_error", "semantic_overlap")
 
 # How many times to wait out provider 429s before failing a call
 LLM_MAX_RETRIES = int(os.getenv("LLM_MAX_RETRIES", "2"))
+
+# EcoGate thresholds. Read by ambiguity_layer/optimize/policy.py.
+ECO_TAU_HIGH = float(os.getenv("ECO_TAU_HIGH", "0.80"))
+ECO_TAU_LOW = float(os.getenv("ECO_TAU_LOW", "0.35"))
+
+# Relative energy model. Read by ambiguity_layer/optimize/energy.py.
+# Output tokens dominate because decode is memory-bandwidth bound.
+INPUT_JOULES_PER_TOKEN = float(os.getenv("INPUT_JOULES_PER_TOKEN", "0.2"))
+OUTPUT_JOULES_PER_TOKEN = float(os.getenv("OUTPUT_JOULES_PER_TOKEN", "8.0"))
+CPU_WATTS = float(os.getenv("CPU_WATTS", "15"))
+GRID_GCO2_PER_KWH = float(os.getenv("GRID_GCO2_PER_KWH", "400"))
