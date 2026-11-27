@@ -1,0 +1,176 @@
+[
+  {
+    "id": "839574015330081836",
+    "question": "What instrument do you blow into with a keyboard?",
+    "first_reading": "The keyboard instrument you play by blowing into a mouthpiece",
+    "first_answer": "A melodica"
+  },
+  {
+    "id": "7376722717277534329",
+    "question": "When does toby come back to the office?",
+    "first_reading": "Toby's return to Dunder Mifflin after Costa Rica",
+    "first_answer": "Season 5, in 2008"
+  },
+  {
+    "id": "-4488762816493062068",
+    "question": "Who wrote a romance called le morte d'arthur about the death of king arthur?",
+    "first_reading": "English compiler of Le Morte d'Arthur",
+    "first_answer": "Sir Thomas Malory"
+  },
+  {
+    "id": "-4224016232048839644",
+    "question": "When did neil armstrong received the presidential medal of freedom?",
+    "first_reading": "Apollo 11 crew Presidential Medal of Freedom",
+    "first_answer": "August 13, 1969"
+  },
+  {
+    "id": "-1859261645300630518",
+    "question": "When does steve come back in shameless season 5?",
+    "first_reading": "Jimmy-Steve's return in US Shameless season 5",
+    "first_answer": "Season 5 episode Rite of Passage (S5E5)"
+  },
+  {
+    "id": "-992532917088482296",
+    "question": "Where did the battle of stone's river take place?",
+    "first_reading": "American Civil War Battle of Stones River",
+    "first_answer": "Murfreesboro, Tennessee"
+  },
+  {
+    "id": "-5589376280063795615",
+    "question": "Where does places in the heart take place?",
+    "first_reading": "Town and state where the story of the 1984 film Places in the Heart is set",
+    "first_answer": "Waxahachie, Texas"
+  },
+  {
+    "id": "177611868978848247",
+    "question": "When did bruce springsteen play the super bowl?",
+    "first_reading": "Date Bruce Springsteen and the E Street Band performed the Super Bowl halftime show",
+    "first_answer": "February 1, 2009"
+  },
+  {
+    "id": "1336654996567078159",
+    "question": "When did new zealand first win the america's cup?",
+    "first_reading": "Team New Zealand's first America's Cup victory",
+    "first_answer": "1995"
+  },
+  {
+    "id": "6962706727076805207",
+    "question": "What kind of car in to catch a thief?",
+    "first_reading": "Iconic sports car in Hitchcock's 1955 To Catch a Thief",
+    "first_answer": "A Sunbeam Alpine"
+  },
+  {
+    "id": "-2364382861908198627",
+    "question": "Where is john wayne star on the hollywood walk of fame?",
+    "first_reading": "Street address of John Wayne's star on the Hollywood Walk of Fame",
+    "first_answer": "1541 Vine Street"
+  },
+  {
+    "id": "9045048337583983722",
+    "question": "What is the most recent season of the blacklist?",
+    "first_reading": "Most recent and final season of NBC's The Blacklist",
+    "first_answer": "Season 10"
+  },
+  {
+    "id": "-8031333510244771356",
+    "question": "Who threw the last perfect game in mlb?",
+    "first_reading": "Pitcher who threw the most recent official MLB perfect game",
+    "first_answer": "Domingo Germán"
+  },
+  {
+    "id": "-9218899977338994404",
+    "question": "When is the last time the rangers won the stanley cup?",
+    "first_reading": "the New York Rangers' most recent Stanley Cup",
+    "first_answer": "June 14, 1994"
+  },
+  {
+    "id": "-2902127503107129011",
+    "question": "What episode does jaime lannister lose his hand?",
+    "first_reading": "the Game of Thrones episode where Jaime's hand is cut off",
+    "first_answer": "Walk of Punishment"
+  },
+  {
+    "id": "-3904805932335139116",
+    "question": "What was the daughter's name on the jetsons?",
+    "first_reading": "the Jetsons' daughter",
+    "first_answer": "Judy Jetson"
+  },
+  {
+    "id": "4137362954133311013",
+    "question": "Who won season 26 of the amazing race?",
+    "first_reading": "the winning team of The Amazing Race season 26",
+    "first_answer": "Laura Pierson and Tyler Adams"
+  },
+  {
+    "id": "1884293144811705689",
+    "question": "How many times has ole miss been to college world series?",
+    "first_reading": "Ole Miss baseball College World Series appearances as of the mid-2010s (through 2017)",
+    "first_answer": "Five"
+  },
+  {
+    "id": "-1070362242275909255",
+    "question": "Highest point from the center of the earth?",
+    "first_reading": "Point on Earth's surface farthest from Earth's center",
+    "first_answer": "Summit of Mount Chimborazo in Ecuador"
+  },
+  {
+    "id": "-3995380877486160814",
+    "question": "Civil court of the city of new york jurisdictional limit?",
+    "first_reading": "the money and equity ceiling of the New York City Civil Court",
+    "first_answer": "$25,000"
+  },
+  {
+    "id": "6986614780487265984",
+    "question": "Who does corbin bleu play in high school musical?",
+    "first_reading": "Corbin Bleu's role in the High School Musical films",
+    "first_answer": "Chad Danforth"
+  },
+  {
+    "id": "8676653257914268817",
+    "question": "Where did the phantom of the opera live?",
+    "first_reading": "where the Phantom lives during the story",
+    "first_answer": "A hidden lair beneath the Paris Opera House"
+  },
+  {
+    "id": "4653868131958586810",
+    "question": "What is the meaning of nat in networking?",
+    "first_reading": "NAT as used in IP networking",
+    "first_answer": "Network Address Translation: rewriting packet IP addresses so private hosts can share public addresses"
+  },
+  {
+    "id": "7499275953505748460",
+    "question": "Who does sam marry in foyle's war?",
+    "first_reading": "Character whom Samantha 'Sam' Stewart marries in Foyle's War",
+    "first_answer": "Adam Wainwright"
+  },
+  {
+    "id": "2672878621544629523",
+    "question": "When does season 2 of jessica jones start on netflix?",
+    "first_reading": "Marvel's Jessica Jones season 2 Netflix premiere",
+    "first_answer": "March 8, 2018"
+  },
+  {
+    "id": "-246080975674757731",
+    "question": "Who defeated marathas in 3rd battle of panipat?",
+    "first_reading": "Third Battle of Panipat, 1761",
+    "first_answer": "Ahmad Shah Durrani (Abdali)"
+  },
+  {
+    "id": "3397865411559231398",
+    "question": "Who is the author of delta of venus?",
+    "first_reading": "Erotic short-story collection Delta of Venus",
+    "first_answer": "Anaïs Nin"
+  },
+  {
+    "id": "1459956625476131080",
+    "question": "What was jesse's wife's name on full house?",
+    "first_reading": "Jesse Katsopolis's wife on Full House",
+    "first_answer": "Rebecca \"Becky\" Donaldson Katsopolis"
+  },
+  {
+    "id": "1619444018488150952",
+    "question": "When did texas become part of united states?",
+    "first_reading": "when the state of Texas was admitted",
+    "first_answer": "December 29, 1845"
+  }
+]

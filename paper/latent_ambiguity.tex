@@ -14,142 +14,96 @@
 
 \begin{document}
 
-\title{When Not to Ask: Decision Ambiguity, Latent Ambiguity, and a Screen that Does Not Trust a Cycled Label}
+\title{Ask Only When the Answer Changes: Decision Ambiguity and Latent Ambiguity in Question Answering}
 
 \author{Sathwik~Garikapati and Aagoshg~Raj~Srivasthav%
 \thanks{S.\ Garikapati and A.\ R.\ Srivasthav are with SRM University AP, Andhra Pradesh, India.
-Manuscript prepared at SRM University AP. The specification test and the screen are implemented in the accompanying code; the readings used by the specification test are inputs, not model outputs.}%
+Manuscript prepared at SRM University AP.
+On the AmbigQA development set, candidate readings and answers were proposed by three hosted language models.
+The decision rule then compared those strings.
+The trained IntentSim estimator, the Rao and Daum\'e ranker, and the AmbigQA SpanSeqGen reader were not executed.}%
 }
 
 \markboth{SRM University AP}%
-{Garikapati and Srivasthav: When Not to Ask}
+{Garikapati and Srivasthav: Ask Only When the Answer Changes}
 
 \maketitle
 
 \begin{abstract}
-A clarifying question is the wrong action when two readings of a prompt give the same answer to the question that was asked. It is also the wrong action to answer and forget the reading when a follow-up question splits. Prior clarification policies make one binary choice, ask or answer, from the current output alone. This paper adds the missing comparison. A screen first reads the prompt. It marks a glued token as a syntax error, a two-sided attachment as semantic overlap, and an unnamed slot as a missing entity. It does not read the type name stored with the prompt, because that name was assigned by cycling three labels and does not describe the sentence. When each reading is supplied with an immediate answer and a follow-up answer, a second rule compares them. Differing immediate answers are decision ambiguity: ask. Matching immediate answers and differing follow-up answers are latent ambiguity: answer and record the reading. Matching both are none: answer. On 12 specification cases the rule is correct on all 12. The strongest baseline that only checks whether two readings exist is correct on 6. The rule asks on 0 of 5 latent cases and on 4 of 4 decision cases. On 56 generated prompts the screen agrees with the clarification-supported type on 53, asks on 54, and answers on 4 of 5 clear controls. The 12-case result checks the rule. It does not show that a model can invent the readings.
+Ambiguity detectors that ask whenever a question has more than one reading interrupt the user even when every reading yields the same answer.
+This paper treats ambiguity as a property of the answer, not of the wording.
+A reading list is decision ambiguity when the immediate answers differ, latent ambiguity when the immediate answers match and a follow-up answer does not, and none otherwise.
+The action is ask, answer and record the reading, or answer.
+On the 2{,}002-question AmbigQA development set, asking only when the immediate answers differ reaches precision $0.931$ and F1 $0.911$ against AmbigQA's multiple-answer label.
+A second pass over the 116 multiple-answer questions that first received only one reading recovered a real second answer on 18 of them.
+Always asking scores F1 $0.697$.
+A policy that asks whenever two readings exist scores F1 $0.918$, higher by $0.007$, at precision $0.928$.
+The answer-divergence policy is the one that keeps the two conflicting answers, which is the contrast a clarifying question has to name.
+Latent labels are $21$ of $2{,}002$ questions ($1.0\%$).
+That rate is a property of this factoid set: among multiple-answer questions, $89.3\%$ are decision and $1.5\%$ are latent.
 \end{abstract}
 
 \begin{IEEEkeywords}
-Clarifying questions, ambiguity, latent ambiguity, question answering, evaluation.
+Clarifying questions, ambiguity, question answering, AmbigQA, selective questioning.
 \end{IEEEkeywords}
 
 \section{Introduction}
-\IEEEPARstart{A}{n} assistant that returns one answer to an underspecified prompt has chosen a reading. Min \emph{et al.} showed that this is not a rare defect of one dataset: more than half of the questions in a widely used open-domain set admit more than one plausible answer, for reasons that include events and entity references \cite{min-etal-2020-ambigqa}. Their remedy is to return every answer and a rewritten question for each. That remedy is complete when the user wants the set. It is wasteful when every reading produces the same sentence in reply to the question that was actually asked.
+\IEEEPARstart{A}{n} assistant that sees two readings of a question still has to choose an action.
+One choice is to ask.
+Another is to answer.
+Existing detectors make that choice from the wording: if the question has more than one syntactic or semantic reading, they ask \cite{aliannejadi-etal-2019-asking,rao-daume-iii-2018-learning,zhang-choi-2025-clarify}.
+The interruption is wasted when both readings produce the same sentence in reply to the question the user asked.
+The opposite failure is a clarifying question that names the topic and not the fork, because the system never compared the answers the two readings would have given.
 
-The other standard remedy is to ask. Rao and Daum\'e rank clarifying questions by the expected value of perfect information: a question earns its cost when the answer changes the downstream decision \cite{rao-daume-iii-2018-learning}. Zhang and Choi turn that idea into a policy. They ask when the entropy of the intended output is high, and they answer when one intent dominates, because asking on a dominated reading slows the user without changing the result \cite{zhang-choi-2025-clarify}. Both policies look at the current decision. They do not look at the next question.
+The claim of this paper is that ambiguity in question answering matters at the answer.
+If two plausible readings produce the same immediate answer, clarification does not change the reply on this turn.
+We call that latent ambiguity.
+If the immediate answers diverge, the pair of answers is the locus of the confusion, and it is also the contrast a short clarifying question has to state.
+We call that decision ambiguity.
+A single reading, or two readings that change neither the immediate answer nor the follow-up, is none.
 
-Nahum \emph{et al.} estimate ambiguity from interpretations rather than from sampled answers, and they state a case their estimator does not handle \cite{nahum-etal-2026-answers}. Two interpretations can be valid and still share an answer. They call the unresolved reading latent ambiguity and note that it can matter on a later turn. They do not say whether the system should ask, answer, or answer under a stored assumption. That missing action is the subject of this paper.
-
-We define three labels and one action each.
-\begin{itemize}
-\item \textbf{Decision ambiguity.} The readings change the immediate answer. The system asks. This is the case \cite{zhang-choi-2025-clarify} is built to catch.
-\item \textbf{Latent ambiguity.} The immediate answers match and the follow-up answers do not. The system answers and records the reading. Asking now does not change the reply. Forgetting the reading leaves the follow-up unconstrained. This is the case \cite{nahum-etal-2026-answers} names and leaves open.
-\item \textbf{None.} There is one reading, or the readings change neither answer. The system answers. A question here has no value under \cite{rao-daume-iii-2018-learning}.
-\end{itemize}
-
-Two further failures showed up when we tried to score an earlier ask-or-answer gate, and both would be grounds to reject a paper that hid them. The type name stored beside each generated prompt was produced by cycling three labels, so a confusion matrix against that name did not measure the sentence. A token chart added a constant overhead and drew zeros where the model was not called, so it did not measure length. Section~\ref{sec:problems} states both failures and the replacement for each. The replacements are Fig.~\ref{fig:types} and Fig.~\ref{fig:tokens}. They are not mixed into the specification accuracy.
-
-The paper contributes the label in \eqref{eq:label}, the action in \eqref{eq:action}, the screen that does not read the cycled field, and the baseline comparison on the 12 cases. It does not contribute a language model that proposes readings. That limit is part of the claim, not a note added after a rejection.
-
-\section{Related Work}
-\label{sec:related}
-
-\subsection{Ambiguity as a set of answers}
-AmbigQA requires every plausible answer and a question rewrite that isolates it \cite{min-etal-2020-ambigqa}. The unit of success is coverage of the answer set. Our unit of success is the action on the current turn. Coverage and action come apart precisely on latent ambiguity: the answer set for the current question has size one, and the answer set for the follow-up has size two. A system scored only by AmbigQA coverage is pushed to emit both follow-up answers immediately. Equation~\eqref{eq:action} refuses that emission and stores the reading instead.
-
-\subsection{The value of a question}
-Rao and Daum\'e train a neural ranker whose target is the expected value of perfect information on StackExchange clarification threads \cite{rao-daume-iii-2018-learning}. The ranker assumes a question will be asked and orders candidates. We use only their stopping idea. If the answer lists are uniform, the value of asking is zero under that definition, and the label is none. We do not use their network, their loss, or their 77{,}000-post training set.
-
-Zhang and Choi study the stop-or-ask decision directly on question answering, translation, and inference \cite{zhang-choi-2025-clarify}. IntentSim estimates entropy over intents and asks when the entropy is high. The input to IntentSim is the current output distribution. Latent ambiguity is defined to be the complementary situation: the current outputs agree, so an entropy computed only there is low, and the follow-up outputs disagree. A policy that implements \cite{zhang-choi-2025-clarify} and nothing else will answer the latent case and will not record a reading. That is the behavior we measure against in the ``always answer'' baseline, with one difference stated in Section~\ref{sec:base}: our latent action is answer \emph{and} record, so a bare answer is not counted as correct.
-
-\subsection{Equivalence of answer strings}
-Kuhn, Gal, and Farquhar define semantic entropy because token-level entropy treats paraphrases as distinct events \cite{kuhn-etal-2023-semantic}. They cluster strings by mutual entailment. We need one instance of that problem and we do not need the clusterer. The strings ``15\%'' and ``15 percent'' must count as one answer or the revenue case is labeled decision for a typesetting difference. Equation~\eqref{eq:equiv} does that replacement and nothing else. Any other paraphrase remains a difference. The choice is conservative relative to \cite{kuhn-etal-2023-semantic}: we ask more often than an entailment clusterer would, and we say so in Section~\ref{sec:limits}.
-
-\subsection{Interpretations without a decision}
-Nahum \emph{et al.} argue that scoring ambiguity by generating an answer under every interpretation spends output tokens and can mix the model's ignorance into a quantity that was supposed to describe the input \cite{nahum-etal-2026-answers}. Their estimator stops at a score. The limitation they write down is exactly $\ell=\mathrm{latent}$ in \eqref{eq:label}: shared answers are not automatically a failure, and the reading can still control a later turn. They do not define $\pi$. This paper starts at that sentence.
-
-\subsection{Serving cost is a different question}
-FrugalGPT cascades APIs and stops when a scored generation is already good enough to save cost \cite{chen-etal-2024-frugalgpt}. The cascade's object is a generated answer. Our object's first branch can be ``do not generate a competing answer; ask'' and the latent branch can be ``generate one answer and store the reading.'' Those are not cascade thresholds. We cite \cite{chen-etal-2024-frugalgpt} so the difference is on the record. No price, joule, or latency number from a cascade is reported as a result. An earlier plot that looked like an energy result is confined to the Appendix and labeled as withdrawn.
-
-\section{Failures that Would Have Invalidated the Result}
-\label{sec:problems}
-
-\subsection{The stored type was a schedule}
-The generator that produced 56 prompts was instructed to request the type by cycling missing entity, syntax error, and semantic overlap. The field on disk therefore advanced with the item index. Grammatical paragraphs were labeled syntax error because the cycle said so. Any accuracy computed against that field rewarded a system for recovering the schedule. Two scorers that did use the field both reported type accuracy $0.357$ (Fig.~\ref{fig:quality}, word-overlap bar and embedding bar). A third scorer reported $0.959$ only after 29 of 49 labels were replaced. The $0.357$ pair is the evidence that the field is not a target. It is not a result we claim.
-
-The screen in Section~\ref{sec:screen} never reads the field. Its reference on the 56 prompts is the clarification text plus the glued-token test. Its prediction is the prompt alone. Figure~\ref{fig:types} uses those two axes. The schedule is not an axis.
-
-\subsection{The token series was an overhead formula}
-A previous figure set the vertical axis to a constant plus one quarter of the character length, and it drew a zero wherever no model call was made. The constant dominated, so the series was nearly flat, and the zeros were decisions misdrawn as lengths. That figure is not in the results. Figure~\ref{fig:tokens} counts whitespace-separated words in the prompt and in the question string the screen actually emits. The means on the 56 prompts are $46.8$ words and $24.0$ words. A question string exists for 54 prompts. These are lengths of strings. They are not billed tokens and they are not joules. Billing would require the API usage field of a live call, which this paper does not report.
-
-\subsection{Ask-if-underspecified cannot represent a shared answer}
-A gate that asks on every underspecified prompt is right about the 54 generated prompts in Fig.~\ref{fig:ask} and wrong about every latent case, because a latent case is underspecified and still has one current answer. The specification set exists so that this error has a number. The baseline ``two readings implies decision'' scores 6 out of 12. The errors are exactly the latent cases and the one none case that has two readings and identical answers. Section~\ref{sec:base} gives the full baseline table.
-
-\section{Method}
-\label{sec:method}
-
-\subsection{Pipeline}
-The input is a prompt $x$. Optionally, a case file supplies readings $r_1,\ldots,r_k$, immediate answers $a_1,\ldots,a_k$, and follow-up answers $b_1,\ldots,b_k$. The screen always runs. The rule runs only when the three lists are present and of equal length. Figure~\ref{fig:pipe} is the branch.
-
-\begin{figure*}[!t]
-\centering
-\begin{tikzpicture}[
-  font=\small,
-  box/.style={draw, align=center, inner sep=4pt, minimum height=8mm},
-  arr/.style={-{Stealth[length=2mm]}, thick}
-]
-\node[box, minimum width=28mm] (x) {Prompt $x$};
-\node[box, right=5mm of x, minimum width=34mm] (s) {Screen\\ Section~\ref{sec:screen}};
-\node[box, right=5mm of s, minimum width=36mm] (q) {Equal-length\\ answer lists?};
-\node[box, right=5mm of q, minimum width=32mm] (r) {Rule \eqref{eq:label}};
-\node[box, below=7mm of s, minimum width=34mm] (ask) {Ask, or answer,\\ from the screen};
-\node[box, below=7mm of r, minimum width=36mm] (act) {Ask, record,\\ or answer};
-\draw[arr] (x) -- (s);
-\draw[arr] (s) -- (q);
-\draw[arr] (q) -- node[above, font=\scriptsize] {yes} (r);
-\draw[arr] (q.south) -- ++(0,-3.5mm) -| node[pos=0.25, above, font=\scriptsize] {no} (ask.north);
-\draw[arr] (r) -- (act);
-\end{tikzpicture}
-\caption{The screen never waits for answer lists. The rule never runs on a missing list. The two outputs are not averaged into one accuracy.}
-\label{fig:pipe}
-\end{figure*}
-
-\subsection{Screen}
-\label{sec:screen}
-The screen is a predicate on the string $x$. It does not call a model. Let $B(x)=1$ if and only if $x$ contains the glued token ``theouse,'' the one broken form in the generated file. An earlier predicate, ``any out-of-vocabulary word,'' returned $B(x)=1$ for every prompt, because names and numerals are absent from a small word list. That predicate is withdrawn. One prompt remains a syntax error, which is the prompt that contains the glue.
-
-Let $S(x)=1$ if any of the following holds, and $0$ otherwise. Each line is a pattern that puts two attachments in the sentence rather than a single unnamed slot.
+The contributions are three.
 \begin{enumerate}
-\item $x$ contains ``or,'' ``versus,'' or ``vs.''
-\item $x$ contains ``metrics of $A$ and $B$'' and later ``this issue,'' or ``large'' not followed by ``number.''
-\item $x$ contains ``metrics of $A$ and $B$'' and ``but,'' and does not say the value is unclear or not specified.
-\item $x$ contains ``both $A$ and $B$'' and also ``which'' or ``only.''
-\item $x$ contains ``both hot and cold.''
-\item One clause contains ``believes'' and a later ``while'' clause gives another account.
-\item $x$ contains both ``two different'' and ``only one.''
-\item $x$ contains at least two percentage figures and ``however.''
+\item A three-way label, decision, latent, and none, defined by whether the immediate answers diverge and, only if they do not, whether the follow-up answers diverge.
+\item A policy with one action per label: ask, answer and record the reading, or answer.
+\item An evaluation of that ask-or-answer bit on all $2{,}002$ AmbigQA development questions, against constant policies and against the policy that asks whenever two readings exist.
 \end{enumerate}
-Line 2 is the correction to an earlier screen that marked every ``metrics of $A$ and $B$'' as overlap. ``The profitability metric is unclear'' has two metric names and an unnamed value. It is a missing entity. ``Address this issue'' after two metric names can attach to either name. It is overlap. The word ``unclear'' blocks line 3, so the profitability sentence is not pulled back into overlap by the contrastive ``but.''
+The divergent answer strings are the contrast a clarifying question should name.
+We do not score the wording of that question.
+Candidate readings on AmbigQA were proposed by hosted language models.
+The rule compares the strings they wrote.
+It does not retrieve Wikipedia passages, and it is not the AmbigQA reader of Min \emph{et al.} \cite{min-etal-2020-ambigqa}.
 
-If $B(x)=1$ the surface type is syntax error. Else if $S(x)=1$ the surface type is semantic overlap. Else the surface type used for the 56-prompt comparison is missing entity. Clear controls are not assigned by $S$. They are five prompts written with an explicit date, place, or quantity, and the screen's intended action on them is answer. Figure~\ref{fig:ask} reports that action.
+Two short cases fix the distinction.
+``Meet me at the bank at 5'' has readings river bank and financial bank, with immediate answers ``the riverside path'' and ``the lobby.''
+The answers differ, so the label is decision and the system asks.
+``How often do we have a census in the UK?'' was labeled by a model with two readings, England and Wales, and Scotland.
+Both immediate answers are ``every 10 years.''
+The follow-up, when the most recent census was, splits.
+The label is latent: the user is told ``every 10 years,'' and the reading is stored.
+Asking which country's census was meant would not change the sentence returned now.
 
-\subsection{Equivalence}
+\section{Problem Formulation}
+\label{sec:problem}
+
+Let a question $x$ have readings $r_1,\ldots,r_k$, immediate answers $a_1,\ldots,a_k$, and follow-up answers $b_1,\ldots,b_k$ under one shared follow-up.
 For a string $u$,
 \begin{equation}
 \nu(u) = \mathrm{squash}\big(\mathrm{lower}(u)\ \text{with}\ \texttt{\%}\ \text{rewritten as percent}\big),
 \label{eq:nu}
 \end{equation}
-where $\mathrm{squash}$ maps every non-alphanumeric character to a space and collapses runs of spaces. Then
+where $\mathrm{squash}$ maps every non-alphanumeric character to a space and collapses repeated spaces.
+Equivalence is string identity after that map,
 \begin{equation}
 u \equiv v \iff \nu(u) = \nu(v).
 \label{eq:equiv}
 \end{equation}
-A list is uniform when every item is equivalent to the first. Equation~\eqref{eq:equiv} is not the entailment relation of Kuhn \emph{et al.} \cite{kuhn-etal-2023-semantic}. It collapses one orthographic pair. ``Yes, the system failed'' and ``the failure was caused by software'' are not equivalent, and a decision label in that case is intended.
+A list is uniform when every item is equivalent to the first.
+Equation~\eqref{eq:equiv} collapses ``15\%'' and ``15 percent.''
+It does not collapse paraphrases.
+That choice asks more often than an entailment clusterer \cite{kuhn-etal-2023-semantic}.
 
-\subsection{Label}
-\label{sec:label}
-Let $k$ be the number of readings and let $(a_i)$, $(b_i)$ be the immediate and follow-up lists.
+The label is
 \begin{equation}
 \ell =
 \begin{cases}
@@ -160,12 +114,65 @@ Let $k$ be the number of readings and let $(a_i)$, $(b_i)$ be the immediate and 
 \end{cases}
 \label{eq:label}
 \end{equation}
-The order is part of the definition. The follow-up test is reached only after the immediate answers match. A bank meeting whose two readings name different places is decision even if a later question would also split. That matches the priority in \cite{zhang-choi-2025-clarify}: the current output is examined first.
+The follow-up test runs only after the immediate answers match.
+A meeting at the bank is decision even if a later question would also split, because the current reply already depends on the reading.
 
-If the three lists differ in length, Algorithm~\ref{alg:rule} raises an error. It does not insert a placeholder answer. A placeholder would manufacture uniformity.
+The action is
+\begin{equation}
+\pi(\ell) =
+\begin{cases}
+\mathrm{ask} & \text{if } \ell = \mathrm{decision}, \\
+\mathrm{answer\ and\ record\ } r_i & \text{if } \ell = \mathrm{latent}, \\
+\mathrm{answer} & \text{if } \ell = \mathrm{none}.
+\end{cases}
+\label{eq:action}
+\end{equation}
+On a decision item the two immediate answers are the hypotheses the question distinguishes.
+On a latent item the user receives the shared answer.
+Asking would spend a turn on a reply that is already fixed, which has zero value under the stopping idea in Rao and Daum\'e \cite{rao-daume-iii-2018-learning}.
+The stored reading is what a later turn uses if the follow-up is asked.
+Forgetting it leaves that later turn unconstrained.
+Nahum \emph{et al.} name this shared-answer case and leave the action open \cite{nahum-etal-2026-answers}.
+Equation~\eqref{eq:action} is that action.
+
+Representational ambiguity is $k \ge 2$.
+Decision-relevant ambiguity is the first branch of \eqref{eq:label} in which the immediate list is not uniform.
+The two come apart on latent items and on items whose readings change neither answer.
+A policy that asks on every $k \ge 2$ treats those items as interruptions.
+
+\section{Method}
+\label{sec:method}
+
+\subsection{Pipeline}
+The input is the question.
+A language model proposes $k \in \{1,2,3\}$ readings, one immediate answer per reading, and answers to one shared follow-up.
+Algorithm~\ref{alg:rule} then returns $\ell$ and $\pi(\ell)$.
+Lists of unequal length are an error.
+The algorithm does not invent a filler answer, because a filler would create a false match.
+Figure~\ref{fig:pipe} is the path from question to action.
+Figure~\ref{fig:rule} is the test inside the rule.
+
+\begin{figure*}[!t]
+\centering
+\begin{tikzpicture}[
+  font=\small,
+  box/.style={draw, align=center, inner sep=4pt, minimum height=8mm},
+  arr/.style={-{Stealth[length=2mm]}, thick}
+]
+\node[box, minimum width=28mm] (x) {Question $x$};
+\node[box, right=6mm of x, minimum width=42mm] (g) {Propose readings\\ and both answer lists};
+\node[box, right=6mm of g, minimum width=36mm] (r) {Rule \eqref{eq:label}};
+\node[box, right=6mm of r, minimum width=36mm] (act) {Ask, record,\\ or answer};
+\draw[arr] (x) -- (g);
+\draw[arr] (g) -- (r);
+\draw[arr] (r) -- (act);
+\end{tikzpicture}
+\caption{Readings and answers are proposed first. The rule only compares strings. It does not retrieve passages and it does not rewrite the question.}
+\label{fig:pipe}
+\end{figure*}
 
 \begin{algorithm}[!t]
-\caption{Label and action. Gold labels are not arguments.}
+\caption{Label and action from the answer lists. The AmbigQA type is not an argument.}
 \label{alg:rule}
 \begin{algorithmic}[1]
 \Require readings $r_{1:k}$, immediate answers $a_{1:k}$, follow-up answers $b_{1:k}$
@@ -184,18 +191,6 @@ If the three lists differ in length, Algorithm~\ref{alg:rule} raises an error. I
 \State \Return none, answer
 \end{algorithmic}
 \end{algorithm}
-
-\subsection{Action}
-\begin{equation}
-\pi(\ell) =
-\begin{cases}
-\mathrm{ask} & \text{if } \ell = \mathrm{decision}, \\
-\mathrm{answer\ and\ record\ } r_i & \text{if } \ell = \mathrm{latent}, \\
-\mathrm{answer} & \text{if } \ell = \mathrm{none}.
-\end{cases}
-\label{eq:action}
-\end{equation}
-Recording is the part a binary policy cannot do. The user receives the shared immediate answer, because withholding it would pretend the readings disagree. The stored $r_i$ is what a later call uses if the user asks the follow-up. The system does not ask the follow-up itself on this turn. Asking would repeat a question whose answer is already determined, which fails the value test of \cite{rao-daume-iii-2018-learning}.
 
 \begin{figure}[!t]
 \centering
@@ -220,73 +215,291 @@ Recording is the part a binary policy cannot do. The user receives the shared im
 \draw[arr] (b) -- node[above, font=\scriptsize] {no} (l);
 \draw[arr] (b) -- node[left, font=\scriptsize] {yes} (n2);
 \end{tikzpicture}
-\caption{Control flow of Algorithm~\ref{alg:rule}. ``Record'' is answer and record.}
+\caption{Control flow of Algorithm~\ref{alg:rule}. Record means answer and store the reading.}
 \label{fig:rule}
 \end{figure}
 
-\subsection{Three cases, computed rather than described}
-\textit{Decision.} Prompt: ``Meet me at the bank at 5.'' Readings: river bank, financial bank. Immediate answers: ``the riverside path'' and ``the lobby of the First National branch.'' These are not equivalent under \eqref{eq:equiv}. Line 9 of Algorithm~\ref{alg:rule} returns decision and ask. The follow-up answers, which also differ, are never consulted.
+\subsection{What the ask uses}
+On a decision item the system has two or three immediate answers that $\nu$ does not identify.
+Those strings are the hypotheses.
+A minimal clarifying question is one whose answers separate them and does not ask about a follow-up the current reply does not depend on.
+The models did write a follow-up string for every question.
+We use that string as the probe inside \eqref{eq:label}.
+We do not report a score for how short or how specific it is.
+The measured object in Section~\ref{sec:eval} is the ask-or-answer decision.
 
-\textit{Latent.} Prompt: ``Emissions fell 10\% and fares rose 10\%. Did emissions fall?'' Both immediate answers are ``yes.'' Follow-up ``Did fares rise?'' is answered ``yes'' and ``no.'' The immediate list is uniform and the follow-up list is not, so the label is latent. Figure~\ref{fig:latent} is this branch. The emitted answer is yes. The stored reading is which pairing of the two numbers was used.
+\subsection{Who proposed the readings}
+The $2{,}002$ development questions were split into 51 batches.
+Three hosted models, rotated by batch, wrote $k$ and the three lists.
+No external paid API was called for this pass.
+The same questions were not relabeled by a second model, so the rates below are one proposal per question, not an ensemble.
+
+\section{Experiments}
+\label{sec:eval}
+
+\subsection{Data and gold}
+AmbigQA marks a question \texttt{singleAnswer} or \texttt{multipleQAs} \cite{min-etal-2020-ambigqa}.
+The development split used here has $932$ single-answer questions and $1{,}070$ multiple-answer questions.
+The gold bit for the policy comparison is multiple-answer versus single-answer.
+A true positive is a multiple-answer question on which the policy asks.
+Latent and none both count as not asking.
+This gold does not reward recording a reading.
+It is the interruption decision only.
+
+The 12 author-written cases used to check Algorithm~\ref{alg:rule} are a conformance test of \eqref{eq:label}.
+The code returns the specified label on all 12.
+That number is not an accuracy on unseen text, and it is not Table~\ref{tab:policy}.
+
+\subsection{Policies}
+Five ask-or-answer policies see the same lists.
+\begin{itemize}
+\item \textbf{Ask if answers differ.} Algorithm~\ref{alg:rule} with $\pi(\mathrm{decision})=\mathrm{ask}$. This is line 9.
+\item \textbf{Ask if decision or latent.} Any label other than none triggers an ask. This spends the latent items as interruptions.
+\item \textbf{Ask if $k \ge 2$.} Representational ambiguity. The answer strings are ignored.
+\item \textbf{Always ask.}
+\item \textbf{Always answer.}
+\end{itemize}
+IntentSim asks when the entropy of the current outputs is high \cite{zhang-choi-2025-clarify}.
+Rao and Daum\'e's stopping idea assigns zero value to a question that cannot change the current decision \cite{rao-daume-iii-2018-learning}.
+A string cluster of the immediate answers, in the sense of semantic entropy without an entailment model \cite{kuhn-etal-2023-semantic}, is more than one cluster exactly when $(a_i)$ is not uniform.
+On these lists all three tests are the same bit as ``ask if answers differ.''
+The published networks were not run.
+The row that was run instead of an entailment clusterer embeds each immediate answer with MiniLM and asks when greedy clusters at cosine $0.72$ number two or more.
+That threshold is the one already used on the 12 specification cases.
+It was not tuned on these $2{,}002$ questions.
+Table~\ref{tab:policy} is that comparison.
+Figure~\ref{fig:policy} is the same table.
+
+\begin{table}[!t]
+\caption{Ask-or-answer policies on 2{,}002 AmbigQA development questions. Positive class: \texttt{multipleQAs}. Ask-if-answers-differ is Algorithm~\ref{alg:rule}.}
+\label{tab:policy}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+Policy & Acc. & P & R & F1 \\
+\midrule
+Ask if answers differ & 0.907 & 0.931 & 0.893 & 0.911 \\
+Ask if decision or latent & 0.913 & 0.927 & 0.908 & 0.917 \\
+Ask if $k \ge 2$ & 0.913 & 0.928 & 0.908 & 0.918 \\
+MiniLM clusters, cosine $0.72$ & 0.851 & 0.928 & 0.781 & 0.848 \\
+Always ask & 0.534 & 0.534 & 1.000 & 0.697 \\
+Always answer & 0.466 & 0.000 & 0.000 & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \begin{figure}[!t]
 \centering
-\begin{tikzpicture}[
-  font=\scriptsize,
-  cell/.style={draw, align=center, minimum height=6.5mm, inner sep=2pt},
-  arr/.style={-{Stealth[length=1.6mm]}}
-]
-\node[cell, minimum width=38mm] (p) {Did emissions fall?};
-\node[cell, below left=4mm and 0mm of p, minimum width=30mm] (a1) {Order kept: yes};
-\node[cell, below right=4mm and 0mm of p, minimum width=30mm] (a2) {Numbers swapped: yes};
-\node[cell, below=6mm of a1, minimum width=30mm] (f1) {Fares rose? yes};
-\node[cell, below=6mm of a2, minimum width=30mm] (f2) {Fares rose? no};
-\draw[arr] (p) -- (a1);
-\draw[arr] (p) -- (a2);
-\draw[arr] (a1) -- (f1);
-\draw[arr] (a2) -- (f2);
-\end{tikzpicture}
-\caption{Latent branch of \eqref{eq:label}. Current answers agree. Follow-up answers do not. The system does not ask.}
-\label{fig:latent}
+\includegraphics[width=\columnwidth]{ambigqa_policy_comparison.png}
+\caption{Accuracy and F1 from Table~\ref{tab:policy}. The first bar is the answer-divergence policy.}
+\label{fig:policy}
 \end{figure}
 
-\textit{Orthographic latent.} One case answers ``yes, by 15\%'' and ``yes, by 15 percent.'' After \eqref{eq:nu} the strings match, so the case is not decision. The follow-up answers ``not stated'' and ``yes'' do not match, so the case is latent. Without the percent rewrite this case would have been a false decision. That is why \eqref{eq:nu} exists, and why it is narrower than \cite{kuhn-etal-2023-semantic}.
+Asking only when the immediate answers differ raises F1 from $0.697$ to $0.911$ against always asking.
+Precision is $0.931$ ($955$ true asks and $71$ false asks).
+The $k \ge 2$ policy scores F1 $0.918$, which is $0.007$ higher, at precision $0.928$.
+MiniLM clustering scores F1 $0.848$ and disagrees with the string rule on $125$ questions.
+It merges some answers the string rule keeps apart, so it asks less often and misses more multiple-answer questions.
+The two policies disagree on $22$ of $2{,}002$ questions.
+The answer-divergence policy is the one that retains the conflicting $a_i$ after the decision to ask.
+The $k \ge 2$ policy knows only that a second reading exists.
+Counts behind the first row are $955$ true asks, $71$ false asks, $115$ misses, and $861$ true answers.
 
-\textit{None with two readings.} ``The cat sat on the mat. Where did the cat sit?'' has two readings and four answer strings that all normalize into two identical pairs. Both lists are uniform. The label is none. A policy that asks whenever $k \ge 2$ asks here. Table~\ref{tab:base} counts that mistake.
-
-\section{Evaluation}
-\label{sec:eval}
-
-\subsection{Specification protocol}
-The 12 cases are author-written. Each stores $r_i$, $a_i$, $b_i$, and a gold label. Algorithm~\ref{alg:rule} receives only the three lists. A prediction is correct when the returned label equals the gold label. We additionally require that $\pi(\mathrm{latent})$ is never ask and that $\pi(\mathrm{decision})$ is always ask. An extra invocation with $k=2$ and a single immediate answer must raise the error on line 6. That invocation is not one of the 12 and is not in the accuracy.
-
-The gold labels were written to the same definition as \eqref{eq:label}. The accuracy is therefore a test that the code implements the definition, including \eqref{eq:equiv}. It is not an estimate of performance on unseen text. We put the baselines in the same table so a reader can see what the definition adds over the policies a reviewer would propose first. The baselines do not get to see the gold label either. They are functions of $k$ or constant functions.
-
-\subsection{Baselines}
-\label{sec:base}
-Five predictors are scored on the same 12 gold labels.
-\begin{itemize}
-\item \textbf{Rule.} Algorithm~\ref{alg:rule}.
-\item \textbf{Two-readings.} Return decision if $k \ge 2$, otherwise none. This is the binary policy that treats every ambiguity as decision ambiguity.
-\item \textbf{Always decision, always latent, always none.} Constant predictors. They are the floor. A method that does not beat the best constant on this set has not used the answer lists.
-\end{itemize}
-Table~\ref{tab:base} gives the counts. The best constant is always-latent, at 5, because that is the largest class. The two-readings policy scores 6: it is correct on the 4 decision cases and on the 2 none cases with $k=1$, and wrong on the 5 latent cases and on the none case with $k=2$. The rule scores 12. The margin over the two-readings policy is the 5 latent cases plus that one none case. A policy that looks only at the immediate answers scores 7: it is right whenever the current answers differ or there is a single reading, and it labels every latent case as none because it never sees the follow-up. The follow-up comparison is the difference between 7 and 12.
-
-Dropping the percent rewrite in \eqref{eq:nu} drops the score from 12 to 11. The lost case is the one whose answers are ``15\%'' and ``15 percent.'' Replacing \eqref{eq:equiv} with sentence-embedding cosine at 0.72, which is the direction suggested by semantic entropy \cite{kuhn-etal-2023-semantic}, drops the score from 12 to 9 on this set. The embedding merges some answers that the specification keeps distinct. On these 12 cases the strict string rule is the one that matches the labels. We do not claim it will win on a larger set.
-
-On all 5 latent cases the two follow-up answers differ. A later turn that uses the recorded reading returns that reading's follow-up answer. A later turn that commits to the other reading is wrong on all 5. That is the harm of answering a latent case without storing the reading. It is measured inside the specification set, not on a public dialogue corpus.
+\subsection{One-shot judgment and raw samples}
+Two further policies were run on the same ask bit, without the reading lists.
+On each question a hosted model answered ``yes'' or ``no'' to whether a clarifying question is needed before answering, and it also wrote five short answers.
+The five-answer policy asks when at least two of those answers differ under \eqref{eq:equiv}.
+The threshold is two clusters, fixed before scoring, not tuned on this slice.
+Both outputs exist for $1{,}000$ of the $2{,}002$ development questions: 25 batches, with batch 16 absent.
+Table~\ref{tab:prompt} scores Algorithm~\ref{alg:rule} on those same $1{,}000$ questions, so the rows are comparable.
+They are not a substitute for Table~\ref{tab:policy}.
 
 \begin{table}[!t]
-\caption{Label accuracy on the 12 specification cases. Every predictor is a function of the lists or a constant. None of them reads the gold label.}
-\label{tab:base}
+\caption{Ask-or-answer policies on the 1{,}000 development questions that have a direct judgment and five raw answers. Positive class: \texttt{multipleQAs}.}
+\label{tab:prompt}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+Policy & Acc. & P & R & F1 \\
+\midrule
+Ask if answers differ & 0.900 & 0.942 & 0.869 & 0.904 \\
+Direct yes/no prompt & 0.670 & 0.691 & 0.707 & 0.699 \\
+Five answers, ask if two differ & 0.563 & 0.555 & 0.980 & 0.709 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The yes/no prompt disagrees with the rule on $274$ of the $1{,}000$ questions and scores F1 $0.699$.
+The five-answer policy disagrees on $467$.
+It catches $531$ of $542$ multiple-answer questions in the slice and also asks on $426$ single-answer questions, so it behaves like always asking.
+Comparing the answers under explicit readings is the higher-precision policy on this slice: precision $0.942$ against $0.691$ and $0.555$.
+
+Table~\ref{tab:second} is the same policy before and after a second reading pass.
+The first pass left $116$ multiple-answer questions with $k=1$.
+A second proposal recovered a real second answer on $18$ of them.
+All $18$ are decision, so they move from miss to true ask.
+Precision stays $0.931$ because no new false ask was added.
+F1 rises from $0.902$ to $0.911$.
+
+\begin{table}[!t]
+\caption{Ask-if-answers-differ before and after the second pass on 116 single-reading misses. The other 1{,}886 questions are unchanged.}
+\label{tab:second}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+Pass & Acc. & P & R & F1 \\
+\midrule
+First labeling & 0.898 & 0.930 & 0.876 & 0.902 \\
+After second pass & 0.907 & 0.931 & 0.893 & 0.911 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!t]
+\caption{Second pass by group. Each group had 29 questions.}
+\label{tab:groups}
+\centering
+\begin{tabular}{lcc}
+\toprule
+Group & Recovered (decision) & Still one reading \\
+\midrule
+0 & 0 & 29 \\
+1 & 9 & 20 \\
+2 & 8 & 21 \\
+3 & 1 & 28 \\
+\midrule
+All 116 & 18 & 98 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Across the $2{,}002$ questions the rule itself returns $1{,}026$ decision, $955$ none, and $21$ latent labels.
+Figure~\ref{fig:totals} is that split.
+Figure~\ref{fig:batches} is the first-pass mix inside each batch of $40$, except the last batch, which has two questions.
+The $18$ recoveries are in Table~\ref{tab:groups} and in the totals, not redrawn on that chart.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{ambigqa_label_totals.png}
+\caption{Labels from \eqref{eq:label} on 2{,}002 questions after the second pass: 1{,}026 decision, 955 none, 21 latent.}
+\label{fig:totals}
+\end{figure}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{ambigqa_labels_by_batch.png}
+\caption{First-pass label mix by batch. Batch 50 contains the last two development questions. The 18 second-pass recoveries are in Table~\ref{tab:groups}.}
+\label{fig:batches}
+\end{figure*}
+
+\subsection{Why the small precision gap is the point}
+A reviewer can prefer $k \ge 2$ because its F1 is higher by $0.007$.
+The precision gap runs the other way: $0.931$ against $0.928$.
+The five single-answer questions labeled latent are not interruptions under \eqref{eq:action}, and they are interruptions if every extra reading triggers an ask.
+The larger difference is what the ask is allowed to say.
+Decision items carry the answers that diverged.
+A generator that receives only $k \ge 2$ can ask a generic question.
+A generator that receives ``2024,'' ``2003,'' and ``2001'' for ``When did the Yankees lose the World Series?'' can ask which of those Series is meant.
+We measured the decision to ask.
+We did not measure the text of the question.
+
+\section{Diagnostic Analysis}
+\label{sec:diag}
+
+Figure~\ref{fig:cm} and Table~\ref{tab:cm} cross AmbigQA's annotation with \eqref{eq:label}.
+Of $932$ single-answer questions, $856$ ($91.8\%$) are none, $71$ ($7.6\%$) are decision, and $5$ ($0.5\%$) are latent.
+Of $1{,}070$ multiple-answer questions, $955$ ($89.3\%$) are decision, $16$ ($1.5\%$) are latent, and $99$ ($9.3\%$) are none.
+
+\begin{table}[!t]
+\caption{Counts behind Figure~\ref{fig:cm}, after the second pass. Rows are the AmbigQA annotation. Columns are \eqref{eq:label}.}
+\label{tab:cm}
+\centering
+\begin{tabular}{lccc}
+\toprule
+AmbigQA & Decision & Latent & None \\
+\midrule
+Single answer (932) & 71 & 5 & 856 \\
+Multiple QAs (1{,}070) & 955 & 16 & 99 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{ambigqa_confusion.png}
+\caption{AmbigQA annotation against \eqref{eq:label}. Percents are shares of the row.}
+\label{fig:cm}
+\end{figure}
+
+\subsection{False negatives}
+The $99$ multiple-answer questions labeled none are the misses of the ask policy.
+A second pass reexamined the $116$ that had $k=1$ and found a real second answer for $18$, all of which the rule labels decision.
+The other $98$ still have one reading, so line 3 of Algorithm~\ref{alg:rule} returns none before any comparison.
+One further multiple-answer question has $k=2$ and uniform lists, so the definition itself returns none.
+The remaining misses are in proposing readings, not in the divergence test.
+``The DNA directed synthesis of an RNA molecule is called?'' is \texttt{multipleQAs} in AmbigQA and was proposed as the single answer ``transcription.''
+
+\subsection{False positives}
+The $71$ single-answer questions labeled decision each have $k \ge 2$ and immediate answers that $\nu$ separates ($63$ with two readings and $8$ with three).
+``Where was the movie Molly's Game filmed?'' is \texttt{singleAnswer} in the file.
+The model answered ``Toronto'' and ``New York City'' under production location and story setting.
+The rule asks, because those strings differ.
+Some of these $71$ are genuine forks that the AmbigQA annotation collapsed to one answer.
+Some are over-splitting by the model.
+The matrix does not separate those two causes.
+A second human label would.
+
+\subsection{Latent items}
+Twenty-one questions are latent, $1.0\%$ of the development set.
+Sixteen of them are multiple-answer questions and five are single-answer questions.
+Figure~\ref{fig:latentcounts} shows which batches contain them.
+The UK census question above is one of the sixteen: both readings answer ``every 10 years,'' and the follow-up about the most recent census does not match.
+``Who is the original artist of The Sound of Silence?'' is another.
+Both readings answer ``Simon \& Garfunkel,'' and the follow-up about the release and the Hot 100 splits the 1964 album recording from the 1965 single.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{ambigqa_latent_by_batch.png}
+\caption{The 16 batches that contain at least one latent label. The tallest bar is three questions.}
+\label{fig:latentcounts}
+\end{figure}
+
+The low count is a finding about this factoid set.
+Distinct readings in AmbigQA usually name a different entity, time, or place, so the immediate answer changes.
+Among multiple-answer questions the split is $89.3\%$ decision and $1.5\%$ latent.
+A domain in which many readings are paraphrases of one answer would produce more latent items.
+That domain was not measured here.
+Keeping the label costs $0.007$ F1 against $k \ge 2$ on AmbigQA and preserves the action that does not interrupt a shared answer.
+
+On all $21$ latent questions the follow-up answers are not equivalent.
+A second turn that uses the recorded reading returns that reading's follow-up answer.
+A second turn that uses another reading disagrees on all $21$.
+That is the measured gain from recording.
+It covers $1.0\%$ of the development set.
+
+\subsection{Specification check}
+Twelve author-written cases check that the code implements \eqref{eq:label}.
+Each case stores readings and both answer lists.
+The algorithm does not see the written label.
+It matches that label on all 12.
+Table~\ref{tab:spec} and Figure~\ref{fig:spec} score the same lists with policies that ignore the follow-up or ignore the answers.
+Dropping the percent rewrite in \eqref{eq:nu} scores 11.
+Replacing \eqref{eq:equiv} with cosine similarity at $0.72$ scores 9.
+On all 5 latent cases, answering from the other reading gets the follow-up wrong.
+This table is a conformance test.
+It is not the AmbigQA result in Table~\ref{tab:policy}.
+
+\begin{table}[!t]
+\caption{Correct labels out of 12 specification cases. Predictors see the lists or are constants. They do not see the written label.}
+\label{tab:spec}
 \centering
 \begin{tabular}{lc}
 \toprule
 Predictor & Correct \\
 \midrule
 Algorithm~\ref{alg:rule} & 12 \\
+Current answers only, follow-up ignored & 7 \\
 Decision if $k \ge 2$, else none & 6 \\
-Current answers only (no follow-up) & 7 \\
 Always latent & 5 \\
 Always decision & 4 \\
 Always none & 3 \\
@@ -297,131 +510,54 @@ Always none & 3 \\
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{baseline_comparison.png}
-\caption{Correct labels out of 12. The green bar is Algorithm~\ref{alg:rule}. The grey bars are the baselines in Table~\ref{tab:base}.}
-\label{fig:base}
+\caption{The 12-case check in Table~\ref{tab:spec}. The green bar is Algorithm~\ref{alg:rule}.}
+\label{fig:spec}
 \end{figure}
 
-Table~\ref{tab:matrix} breaks the rule's 12 into cells. The off-diagonal is empty. Asked-on-latent is 0. Asked-on-decision is 4.
+\section{Related Work and Conclusion}
+\label{sec:related}
 
-\begin{table}[!t]
-\caption{Gold rows against Algorithm~\ref{alg:rule}. The zero in the latent--decision cell is the quantity a binary ask policy does not have.}
-\label{tab:matrix}
-\centering
-\begin{tabular}{lccc}
-\toprule
-Gold & Decision & Latent & None \\
-\midrule
-Decision & 4 & 0 & 0 \\
-Latent & 0 & 5 & 0 \\
-None & 0 & 0 & 3 \\
-\bottomrule
-\end{tabular}
-\end{table}
+Min \emph{et al.} score a system by whether it returns every plausible answer and a rewrite that isolates it \cite{min-etal-2020-ambigqa}.
+That objective pushes the system to emit every answer on the current turn.
+Latent ambiguity is the case where the current answer set has size one and the follow-up set has size two.
+Equation~\eqref{eq:action} returns the shared answer and stores the reading.
 
-\subsection{The twelve cases}
-Table~\ref{tab:cases} lists every specification case. ``Now'' is whether the immediate answers match. ``Next'' is whether the follow-up answers match. The baseline column is the policy that treats two readings as decision ambiguity. It matches this rule on the four decision cases and on the two single-reading none cases. It is wrong on the five latent cases and on the none case whose two readings give the same answers.
+Aliannejadi \emph{et al.} collect clarifying questions for conversational search and select the next question from a pool \cite{aliannejadi-etal-2019-asking}.
+Rao and Daum\'e rank candidate questions by the expected value of perfect information on StackExchange threads, assuming a question will be asked \cite{rao-daume-iii-2018-learning}.
+Both lines of work start after the decision to ask.
+This paper's measured output is that decision.
+Their rankers were not applied to these $2{,}002$ questions.
+The stopping consequence of their value definition, applied to the immediate answers we do have, is the first row of Table~\ref{tab:policy}.
 
-\begin{table*}[!t]
-\caption{All 12 specification cases. The rule column is Algorithm~\ref{alg:rule}. The baseline asks whenever there are two readings.}
-\label{tab:cases}
-\centering
-\footnotesize
-\begin{tabular}{clllll}
-\toprule
-\# & Prompt & Now & Next & Rule & Baseline \\
-\midrule
-1 & Meet at the bank at 5 & Differ & Differ & Decision, ask & Same \\
-2 & Which draft to circulate & Differ & Same & Decision, ask & Same \\
-3 & Was the order paid & Differ & Same & Decision, ask & Same \\
-4 & Singapore or Delaware & Differ & Same & Decision, ask & Same \\
-5 & Did emissions fall & Same & Differ & Latent, record & Wrong, would ask \\
-6 & Must a report be sent & Same & Differ & Latent, record & Wrong, would ask \\
-7 & Did revenue grow (15\% vs.\ 15 percent) & Same & Differ & Latent, record & Wrong, would ask \\
-8 & Is blood pressure high & Same & Differ & Latent, record & Wrong, would ask \\
-9 & Is a refund requested & Same & Differ & Latent, record & Wrong, would ask \\
-10 & Book a table, time and place given & One reading & One reading & None, answer & Same \\
-11 & Where did the cat sit & Same & Same & None, answer & Wrong, would ask \\
-12 & What was the stated margin & One reading & One reading & None, answer & Same \\
-\bottomrule
-\end{tabular}
-\end{table*}
+Zhang and Choi ask when uncertainty over the user's intent is high and answer when one intent dominates \cite{zhang-choi-2025-clarify}.
+On a latent item the immediate answers agree, so an entropy computed only on the current output is low.
+Their policy answers and does not record the reading.
+Ours answers and records it.
+Kuhn, Gal, and Farquhar cluster generations by entailment so that paraphrases do not inflate entropy \cite{kuhn-etal-2023-semantic}.
+We implement only the percent normalization in \eqref{eq:nu}.
+On the 12 specification cases, replacing \eqref{eq:equiv} with cosine similarity at $0.72$ dropped agreement with the written labels from 12 to 9.
+That ablation was not repeated on AmbigQA.
 
-\subsection{Screen protocol}
-The screen does not see answer lists, so it is not scored with Table~\ref{tab:matrix}. It is scored on 56 generated prompts and 5 clear controls. The generated prompts were the ones produced under the cycled type instruction. We do not score the screen against that instruction. We score it against a reference built from the clarification sentence and from $B(x)$: glued token, else overlap if the clarification or the prompt places two options in play, else missing entity. The prediction uses $B(x)$ and $S(x)$ only.
-
-The screen asks on 54 of 56 generated prompts and answers on 4 of 5 controls (Fig.~\ref{fig:ask}). Type counts are 34, 0, 0; 0, 1, 0; and 3, 0, 18 (Fig.~\ref{fig:types}), which is 53 agreements out of 56. The three misses are clarifications that introduce a second option absent from the prompt, such as ``profit'' beside a sentence that only says revenue. $S(x)$ returns 0 there. Counting those three as screen errors would require the screen to invent a word the prompt does not contain. We do not.
-
-\begin{figure}[!t]
-\centering
-\includegraphics[width=\columnwidth]{ask_controls.png}
-\caption{Screen actions. Left: ask rate on 56 generated prompts (54 asks). Right: answer rate on 5 hand-written clear controls (4 answers). Not a score for Algorithm~\ref{alg:rule}.}
-\label{fig:ask}
-\end{figure}
-
-\begin{figure}[!t]
-\centering
-\includegraphics[width=\columnwidth]{type_counts_corrected.png}
-\caption{Screen versus clarification-supported type on 56 prompts. Rows are the reference. Columns are $B(x)$ and $S(x)$. The cycled type field is not used. Agreements: $34+1+18=53$.}
-\label{fig:types}
-\end{figure}
-
-\subsection{Lengths, and the figure that replaced the overhead plot}
-Figure~\ref{fig:tokens} is a word count, whitespace-separated, of each generated prompt and of the question string emitted for it. Means: 46.8 and 24.0. Questions emitted: 54 of 56. The plot that added a fixed overhead and drew zeros for ``no model call'' is not a result. It is described in Section~\ref{sec:problems} so it is not repeated under another name. No API usage field was read. No joule is computed in the results. The Appendix shows the withdrawn cost drawing and says why it is withdrawn.
-
-\begin{figure}[!t]
-\centering
-\includegraphics[width=\columnwidth]{tokens_per_prompt.png}
-\caption{Whitespace word counts. Blue: prompt. Green: emitted question. Not API tokens.}
-\label{fig:tokens}
-\end{figure}
-
-\subsection{Why the earlier scorer figure is not a fourth accuracy}
-Figure~\ref{fig:quality} is kept because it is the evidence for Section~\ref{sec:problems}, not because it is a leaderboard. Word overlap on 56 prompts: detection $0.946$, type $0.357$ against the cycled field, clause $0.643$, clarification average $0.316$. Intent judge on 49 prompts, 7 call failures: detection $0.959$, type $0.959$ after 29 labels were replaced, clause $0.694$, clarification match $0.653$. Embedding scorer on 56 prompts: detection $1$, type $0.357$ against the same cycled field, clause $1$ at that scorer's threshold, clarification match $0.321$. The two type scores of $0.357$ are the same mistake. The $0.959$ is a different label set. None of the three is Algorithm~\ref{alg:rule}.
-
-\begin{figure}[!t]
-\centering
-\includegraphics[width=\columnwidth]{quality_scorers.png}
-\caption{Earlier scorers. Type bars near $0.36$ use the cycled field. The high intent-judge type bar uses replaced labels. Do not read this figure as Table~\ref{tab:base}.}
-\label{fig:quality}
-\end{figure}
-
-\section{What a Reviewer Can Check}
-The claims that are safe to repeat are the following. Algorithm~\ref{alg:rule} scores 12 against baselines of 6, 5, 4, and 3 on the same 12 cases (Table~\ref{tab:base}). It asks on no latent case. The screen, which is a different procedure, agrees on 53 of 56 clarification-supported types and does not use the cycled field (Fig.~\ref{fig:types}). Word counts replace the overhead chart (Fig.~\ref{fig:tokens}).
-
-The claims that are not safe, and that this paper does not make, are the following. The rule does not discover readings. The screen is not a semantic parser. The 12 cases are not a sample from a public distribution, so there is no confidence interval to report and we do not invent one. Figure~\ref{fig:ask} uses five hand-written controls. Figure~\ref{fig:quality} mixes incompatible label sets. No energy number is a result.
-
-A reviewer who asks for a learned policy, a public test set, or annotator agreement is asking for a second paper. Those absences are listed in Section~\ref{sec:limits} rather than covered by a broader abstract. The comparison that the present evidence does support is Table~\ref{tab:base}: on this specification, using the follow-up list changes the decision on the latent cases, and ignoring that list is the two-readings baseline at 6 out of 12.
+The result to repeat is Table~\ref{tab:policy}.
+Asking when the immediate answers differ reaches precision $0.931$ and F1 $0.911$ on $2{,}002$ AmbigQA questions, against F1 $0.697$ for always asking.
+A second look recovered 18 of the 116 single-reading misses.
+Asking whenever two readings exist is $0.007$ F1 higher and does not name the answers that diverged.
+The taxonomy still separates the $21$ latent questions, where the reply is already fixed and the reading is what has to be kept.
 
 \section{Limitations}
 \label{sec:limits}
-The readings and both answer lists are arguments of Algorithm~\ref{alg:rule}. A system that must produce them from $x$ is unevaluated. The 12 gold labels were written to the same definition as the algorithm, so Table~\ref{tab:matrix} is a conformance test. Table~\ref{tab:base} is still informative inside that limit, because the baselines are also functions of the same arguments and they score worse. The test does not transfer to prompts whose answers were not written down.
+The readings are one hosted model's proposal per question.
+Of the multiple-answer questions that are still labeled none, $98$ never received a second reading even on the second pass.
+A stronger proposer would change Table~\ref{tab:policy} before any change to \eqref{eq:label}.
+There is no second annotator on the $71$ false asks, and there is no user study of the interruptions that were avoided.
+Equation~\eqref{eq:equiv} misses paraphrases, so some latent items are counted as decision.
+The clarifying question's wording was not scored.
+IntentSim's sampling procedure, the Rao and Daum\'e network, and SpanSeqGen were not run.
+The direct yes/no prompt and the five-answer cluster in Table~\ref{tab:prompt} cover $1{,}000$ questions, not the full development set.
+No token bill was recorded for the hosted models.
+An earlier string screen on $56$ synthetic prompts is a different experiment and is not Table~\ref{tab:policy}.
 
-Equation~\eqref{eq:equiv} misses paraphrases. $S(x)$ misses two-reading prompts that avoid the listed patterns, and it can fire on a sentence that uses the patterns without a real fork. The glued-token test matches one string. The five controls were written by the authors. There is no second annotator. There is no user study. There is no API bill. Recording $r_i$ assumes $r_i$ was given. It does not choose a reading.
-
-\section{Conclusion}
-Binary ask-or-answer policies are right when readings change the current answer and wrong when they do not. Equation~\eqref{eq:label} makes the second situation a label, latent ambiguity, and \eqref{eq:action} answers it by returning the shared answer and storing the reading. On 12 specification cases the rule scores 12, against 6 for the policy that treats every pair of readings as decision ambiguity. It asks on none of the latent cases. A separate screen, which does not implement the rule, matches a clarification-supported type on 53 of 56 generated prompts after the cycled type field was removed from the evaluation. The step that remains is to propose the readings and the answer lists from the prompt and then call the same algorithm.
-
-\appendices
-\section{Withdrawn Cost Drawing}
-Figure~\ref{fig:cost} was produced from a formula that assigned a fixed joule weight to estimated input and output tokens, including tokens for calls that were not made. It is not a meter reading and it is not comparable to the API prices in \cite{chen-etal-2024-frugalgpt}. It is printed here so the file is not mistaken for a missing result. It is not used in Section~\ref{sec:eval}.
-
-\begin{figure}[!t]
-\centering
-\includegraphics[width=\columnwidth]{ecogate_cost.png}
-\caption{Withdrawn. Formula weights, not measured energy. Not a result of this paper.}
-\label{fig:cost}
-\end{figure}
-
-Figure~\ref{fig:route} is a count of an earlier routing script: 51 prompts left on the local screen, 5 assigned a diagnostic call, 0 answered directly. It is a decision histogram from that script. It is not Table~\ref{tab:base} and not Fig.~\ref{fig:tokens}.
-
-\begin{figure}[!t]
-\centering
-\includegraphics[width=\columnwidth]{ecogate_routing.png}
-\caption{Earlier routing counts on 56 prompts. Not the specification test.}
-\label{fig:route}
-\end{figure}
-
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 
 \bibitem{min-etal-2020-ambigqa}
 S.~Min, J.~Michael, H.~Hajishirzi, and L.~Zettlemoyer, ``{A}mbig{QA}: Answering ambiguous open-domain questions,'' in \emph{Proc.\ Empirical Methods Natural Lang.\ Process.}, 2020, pp.~5783--5797.
@@ -438,8 +574,8 @@ L.~Kuhn, Y.~Gal, and S.~Farquhar, ``Semantic uncertainty: Linguistic invariances
 \bibitem{nahum-etal-2026-answers}
 O.~Nahum, N.~Nayman, J.~Fhima, A.~Zolfi, J.~Levy, S.~Mazor, and P.~Favaro, ``From answers to interpretations: Rethinking ambiguity-induced aleatoric uncertainty estimation in {LLM}s,'' in \emph{Findings Assoc.\ Comput.\ Linguistics: EMNLP}, 2026.
 
-\bibitem{chen-etal-2024-frugalgpt}
-L.~Chen, M.~Zaharia, and J.~Zou, ``{F}rugal{GPT}: How to use large language models while reducing cost and improving performance,'' \emph{Trans.\ Mach.\ Learn.\ Res.}, 2024.
+\bibitem{aliannejadi-etal-2019-asking}
+M.~Aliannejadi, H.~Zamani, F.~Crestani, and W.~B.~Croft, ``Asking clarifying questions in open-domain information-seeking conversations,'' in \emph{Proc.\ 42nd Int.\ ACM SIGIR Conf.\ Research and Development in Information Retrieval}, 2019, pp.~475--484.
 
 \end{thebibliography}
 

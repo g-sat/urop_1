@@ -167,16 +167,23 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--live", action="store_true")
     parser.add_argument("--limit", type=int, default=300)
+    parser.add_argument("--all", action="store_true", help="Every AmbigQA dev question")
+    parser.add_argument("--skip-detector", action="store_true")
     args = parser.parse_args()
-    report = {"detector": train_detector(), "live": None}
-    print(json.dumps(report["detector"], indent=2))
+    if args.skip_detector:
+        report = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {"detector": None, "live": None}
+    else:
+        report = {"detector": train_detector(), "live": None}
+        print(json.dumps(report["detector"], indent=2))
     if args.live:
         seen = done_ids()
-        picked = [row for row in sample_questions(args.limit) if row["id"] not in seen]
+        source = load("ambigqa_dev_light.json") if args.all else sample_questions(args.limit)
+        total = len(source)
+        picked = [row for row in source if row["id"] not in seen]
         LIVE.parent.mkdir(parents=True, exist_ok=True)
         with LIVE.open("a", encoding="utf-8") as handle:
             for i, row in enumerate(picked, start=1):
-                print(f"[{len(seen)+i}/{args.limit}] {row['id']}", flush=True)
+                print(f"[{len(seen)+i}/{total}] {row['id']}", flush=True)
                 try:
                     item = one_item(row)
                 except Exception as exc:  # noqa: BLE001

@@ -49,14 +49,15 @@ def wrap(text: str, width: int) -> str:
 def baseline_chart() -> None:
     names = [
         "This rule",
+        "Current answers\nonly",
         "Two readings\nmeans ask",
         "Always latent",
         "Always decision",
         "Always answer",
     ]
-    scores = [12, 6, 5, 4, 3]
-    colors = ["#2F855A", "#8D99AE", "#8D99AE", "#8D99AE", "#8D99AE"]
-    fig, ax = plt.subplots(figsize=(7.2, 3.8))
+    scores = [12, 7, 6, 5, 4, 3]
+    colors = ["#2F855A", "#8D99AE", "#8D99AE", "#8D99AE", "#8D99AE", "#8D99AE"]
+    fig, ax = plt.subplots(figsize=(7.6, 3.8))
     bars = ax.bar(names, scores, color=colors)
     ax.set_ylim(0, 14)
     ax.set_ylabel("Correct labels out of 12")
